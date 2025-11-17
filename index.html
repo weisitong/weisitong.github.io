@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weyston Technology - One-Stop Electronic Components Procurement</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // Deep blue
+                        secondary: '#fbbf24', // Yellow
+                        accent: '#374151', // Dark gray
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="/logo3.jpeg" alt="Weyston Technology" class="h-10 w-auto">
+                    <div class="ml-3">
+                        <div class="text-primary font-bold text-lg" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="#products" class="text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="#partners" class="text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="#about" class="text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="#contact" class="text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    
+                    <!-- Language Toggle -->
+                    <button id="langToggle" class="bg-primary text-white px-3 py-1 rounded-md text-sm hover:bg-blue-800 transition-colors">
+                        中文
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-accent hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block px-3 py-2 text-accent hover:text-primary mobile-menu-item" data-en="Home" data-zh="首页">Home</a>
+                    <a href="#products" class="block px-3 py-2 text-accent hover:text-primary mobile-menu-item" data-en="Products" data-zh="产品">Products</a>
+                    <a href="#partners" class="block px-3 py-2 text-accent hover:text-primary mobile-menu-item" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="#about" class="block px-3 py-2 text-accent hover:text-primary mobile-menu-item" data-en="About" data-zh="关于我们">About</a>
+                    <a href="#contact" class="block px-3 py-2 text-accent hover:text-primary mobile-menu-item" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="mobileLangToggle" class="block w-full text-left px-3 py-2 bg-primary text-white rounded-md mt-2">
+                        中文
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-primary to-blue-800 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6" data-en="Professional Electronic Components Procurement" data-zh="专业电子元器件采购">Professional Electronic Components Procurement</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90" data-en="Your trusted partner for high-quality passive components and electronic solutions" data-zh="您值得信赖的高品质被动元件和电子解决方案合作伙伴">Your trusted partner for high-quality passive components and electronic solutions</p>
+                <button class="bg-secondary text-primary px-8 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition-colors" data-en="Get Quote Now" data-zh="立即询价">Get Quote Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-en="Product Categories" data-zh="产品类别">Product Categories</h2>
+                <p class="text-lg text-accent" data-en="Comprehensive range of electronic components for all your needs" data-zh="满足您所有需求的全面电子元器件产品线">Comprehensive range of electronic components for all your needs</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Resistors -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Resistors" data-zh="电阻器">Resistors</h3>
+                    <p class="text-accent mb-4" data-en="Precision resistors, chip resistors, power resistors, and variable resistors for various applications" data-zh="精密电阻、贴片电阻、功率电阻和可变电阻，适用于各种应用">Precision resistors, chip resistors, power resistors, and variable resistors for various applications</p>
+                    <ul class="text-sm text-gray-600">
+                        <li data-en="• SMD Resistors" data-zh="• 贴片电阻">• SMD Resistors</li>
+                        <li data-en="• Through-hole Resistors" data-zh="• 插件电阻">• Through-hole Resistors</li>
+                        <li data-en="• Power Resistors" data-zh="• 功率电阻">• Power Resistors</li>
+                    </ul>
+                </div>
+
+                <!-- Capacitors -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-battery-half"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Capacitors" data-zh="电容器">Capacitors</h3>
+                    <p class="text-accent mb-4" data-en="Ceramic, electrolytic, tantalum, and film capacitors with superior performance characteristics" data-zh="陶瓷、电解、钽和薄膜电容器，具有卓越的性能特征">Ceramic, electrolytic, tantalum, and film capacitors with superior performance characteristics</p>
+                    <ul class="text-sm text-gray-600">
+                        <li data-en="• MLCC Capacitors" data-zh="• 多层陶瓷电容">• MLCC Capacitors</li>
+                        <li data-en="• Electrolytic Capacitors" data-zh="• 电解电容">• Electrolytic Capacitors</li>
+                        <li data-en="• Tantalum Capacitors" data-zh="• 钽电容">• Tantalum Capacitors</li>
+                    </ul>
+                </div>
+
+                <!-- Inductors -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-circle-notch"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Inductors" data-zh="电感器">Inductors</h3>
+                    <p class="text-accent mb-4" data-en="High-quality inductors including power inductors, RF inductors, and common mode chokes" data-zh="高品质电感器，包括功率电感、射频电感和共模扼流圈">High-quality inductors including power inductors, RF inductors, and common mode chokes</p>
+                    <ul class="text-sm text-gray-600">
+                        <li data-en="• Power Inductors" data-zh="• 功率电感">• Power Inductors</li>
+                        <li data-en="• RF Inductors" data-zh="• 射频电感">• RF Inductors</li>
+                        <li data-en="• Common Mode Chokes" data-zh="• 共模扼流圈">• Common Mode Chokes</li>
+                    </ul>
+                </div>
+
+                <!-- Diodes -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Diodes" data-zh="二极管">Diodes</h3>
+                    <p class="text-accent mb-4" data-en="Schottky, Zener, TVS, and rectifier diodes for protection and power management" data-zh="肖特基、齐纳、TVS和整流二极管，用于保护和电源管理">Schottky, Zener, TVS, and rectifier diodes for protection and power management</p>
+                    <ul class="text-sm text-gray-600">
+                        <li data-en="• Schottky Diodes" data-zh="• 肖特基二极管">• Schottky Diodes</li>
+                        <li data-en="• TVS Diodes" data-zh="• TVS二极管">• TVS Diodes</li>
+                        <li data-en="• Rectifier Diodes" data-zh="• 整流二极管">• Rectifier Diodes</li>
+                    </ul>
+                </div>
+
+                <!-- Crystals & Oscillators -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Crystals & Oscillators" data-zh="晶振与振荡器">Crystals & Oscillators</h3>
+                    <p class="text-accent mb-4" data-en="Precision timing solutions including quartz crystals, ceramic resonators, and oscillators" data-zh="精密时序解决方案，包括石英晶体、陶瓷谐振器和振荡器">Precision timing solutions including quartz crystals, ceramic resonators, and oscillators</p>
+                    <ul class="text-sm text-gray-600">
+                        <li data-en="• Quartz Crystals" data-zh="• 石英晶体">• Quartz Crystals</li>
+                        <li data-en="• Ceramic Resonators" data-zh="• 陶瓷谐振器">• Ceramic Resonators</li>
+                        <li data-en="• Clock Oscillators" data-zh="• 时钟振荡器">• Clock Oscillators</li>
+                    </ul>
+                </div>
+
+                <!-- Connectors -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Connectors" data-zh="连接器">Connectors</h3>
+                    <p class="text-accent mb-4" data-en="Reliable interconnect solutions including board-to-board, wire-to-board, and I/O connectors" data-zh="可靠的互连解决方案，包括板对板、线对板和I/O连接器">Reliable interconnect solutions including board-to-board, wire-to-board, and I/O connectors</p>
+                    <ul class="text-sm text-gray-600">
+                        <li data-en="• Board-to-Board" data-zh="• 板对板连接器">• Board-to-Board</li>
+                        <li data-en="• Wire-to-Board" data-zh="• 线对板连接器">• Wire-to-Board</li>
+                        <li data-en="• I/O Connectors" data-zh="• I/O连接器">• I/O Connectors</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-en="Trusted Partners" data-zh="信赖合作伙伴">Trusted Partners</h2>
+                <p class="text-lg text-accent" data-en="We work with leading global manufacturers to ensure quality and reliability" data-zh="我们与全球领先制造商合作，确保质量和可靠性">We work with leading global manufacturers to ensure quality and reliability</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <!-- Partner logos would go here -->
+                <div class="bg-gray-100 rounded-lg p-6 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary mb-2">Murata</div>
+                        <div class="text-sm text-accent" data-en="Capacitors & Inductors" data-zh="电容器与电感器">Capacitors & Inductors</div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 rounded-lg p-6 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary mb-2">TDK</div>
+                        <div class="text-sm text-accent" data-en="Passive Components" data-zh="被动元件">Passive Components</div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 rounded-lg p-6 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary mb-2">Yageo</div>
+                        <div class="text-sm text-accent" data-en="Resistors & Capacitors" data-zh="电阻器与电容器">Resistors & Capacitors</div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 rounded-lg p-6 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary mb-2">Samsung</div>
+                        <div class="text-sm text-accent" data-en="MLCC Capacitors" data-zh="多层陶瓷电容">MLCC Capacitors</div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 rounded-lg p-6 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary mb-2">Vishay</div>
+                        <div class="text-sm text-accent" data-en="Semiconductors" data-zh="半导体">Semiconductors</div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 rounded-lg p-6 flex items-center justify-center hover:shadow-lg transition-shadow">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary mb-2">AVX</div>
+                        <div class="text-sm text-accent" data-en="Tantalum Capacitors" data-zh="钽电容">Tantalum Capacitors</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6" data-en="About Weyston Technology" data-zh="关于纬思通科技">About Weyston Technology</h2>
+                    <p class="text-lg text-accent mb-6" data-en="With years of expertise in electronic components distribution, Weyston Technology has established itself as a trusted partner for businesses worldwide. We specialize in providing high-quality passive components and comprehensive procurement solutions." data-zh="凭借多年的电子元器件分销专业经验，纬思通科技已成为全球企业值得信赖的合作伙伴。我们专注于提供高品质被动元件和全面的采购解决方案。">With years of expertise in electronic components distribution, Weyston Technology has established itself as a trusted partner for businesses worldwide. We specialize in providing high-quality passive components and comprehensive procurement solutions.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="text-secondary text-2xl mr-4">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2" data-en="Quality Assurance" data-zh="质量保证">Quality Assurance</h4>
+                                <p class="text-sm text-accent" data-en="100% authentic components from authorized distributors" data-zh="来自授权分销商的100%正品元器件">100% authentic components from authorized distributors</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-secondary text-2xl mr-4">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2" data-en="Fast Delivery" data-zh="快速交付">Fast Delivery</h4>
+                                <p class="text-sm text-accent" data-en="Global logistics network for timely delivery" data-zh="全球物流网络确保及时交付">Global logistics network for timely delivery</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-secondary text-2xl mr-4">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2" data-en="Expert Support" data-zh="专业支持">Expert Support</h4>
+                                <p class="text-sm text-accent" data-en="Technical expertise and customer service excellence" data-zh="技术专长和卓越的客户服务">Technical expertise and customer service excellence</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-secondary text-2xl mr-4">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2" data-en="Competitive Pricing" data-zh="竞争价格">Competitive Pricing</h4>
+                                <p class="text-sm text-accent" data-en="Best value through strategic partnerships" data-zh="通过战略合作伙伴关系提供最佳价值">Best value through strategic partnerships</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <div class="text-6xl text-primary mb-4">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary mb-4" data-en="Professional Excellence" data-zh="专业卓越">Professional Excellence</h3>
+                        <p class="text-accent" data-en="Committed to providing the highest quality electronic components and exceptional service to our global clientele." data-zh="致力于为全球客户提供最高品质的电子元器件和卓越的服务。">Committed to providing the highest quality electronic components and exceptional service to our global clientele.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-en="Contact Us" data-zh="联系我们">Contact Us</h2>
+                <p class="text-lg opacity-90" data-en="Get in touch for quotes, technical support, or partnership opportunities" data-zh="联系我们获取报价、技术支持或合作机会">Get in touch for quotes, technical support, or partnership opportunities</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Email -->
+                <div class="text-center">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4 class="font-bold mb-2" data-en="Email" data-zh="邮箱">Email</h4>
+                    <p class="opacity-90">inquiry@weyston.com</p>
+                </div>
+
+                <!-- Phone -->
+                <div class="text-center">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h4 class="font-bold mb-2" data-en="Phone" data-zh="电话">Phone</h4>
+                    <p class="opacity-90">+86 157-1077-1604</p>
+                </div>
+
+                <!-- WeChat -->
+                <div class="text-center">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fab fa-weixin"></i>
+                    </div>
+                    <h4 class="font-bold mb-2" data-en="WeChat" data-zh="微信">WeChat</h4>
+                    <img src="/Wechat.jpeg" alt="WeChat QR Code" class="w-24 h-24 mx-auto rounded-lg">
+                </div>
+
+                <!-- Address -->
+                <div class="text-center">
+                    <div class="text-secondary text-4xl mb-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4 class="font-bold mb-2" data-en="Address" data-zh="地址">Address</h4>
+                    <p class="opacity-90 text-sm" data-en="Room 1210, City East, 36 Luofang Road, Luohu District, Shenzhen" data-zh="深圳市罗湖区罗芳路36号城市东方1210">Room 1210, City East, 36 Luofang Road, Luohu District, Shenzhen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="/logo3.jpeg" alt="Weyston Technology" class="h-8 w-auto mr-3">
+                    <div>
+                        <div class="font-bold" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                        <div class="text-sm opacity-75" data-en="Professional Electronic Components" data-zh="专业电子元器件">Professional Electronic Components</div>
+                    </div>
+                </div>
+                <div class="text-sm opacity-75">
+                    <span data-en="© 2024 Weyston Technology. All rights reserved." data-zh="© 2024 纬思通科技。保留所有权利。">© 2024 Weyston Technology. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        let currentLang = 'en';
+        
+        function switchLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            
+            // Update all elements with data attributes
+            document.querySelectorAll('[data-en][data-zh]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLang}`);
+            });
+            
+            // Update language toggle buttons
+            const langToggle = document.getElementById('langToggle');
+            const mobileLangToggle = document.getElementById('mobileLangToggle');
+            const toggleText = currentLang === 'en' ? '中文' : 'EN';
+            
+            langToggle.textContent = toggleText;
+            mobileLangToggle.textContent = toggleText;
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = currentLang;
+        }
+        
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on menu items
+        document.querySelectorAll('.mobile-menu-item').forEach(item => {
+            item.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Language toggle event listeners
+        document.getElementById('langToggle').addEventListener('click', switchLanguage);
+        document.getElementById('mobileLangToggle').addEventListener('click', switchLanguage);
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
