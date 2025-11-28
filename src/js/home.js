@@ -200,6 +200,28 @@ const hotSellingModels = [
         icon: "fas fa-battery-half"
     },
     {
+        brand_en: "Taiyo Yuden",
+        brand_zh: "太阳诱电 太诱",
+        category_en: "MLCC Capacitor",
+        category_zh: "多层陶瓷电容",
+        model: "JMK063BC6105MP-F",
+        specs: "",
+        feature_en: "Best price, authorized channel, stable supply",
+        feature_zh: "价格最优 代理渠道 供应稳定",
+        icon: "fas fa-battery-half"
+    },
+    {
+        brand_en: "Taiyo Yuden",
+        brand_zh: "太阳诱电 太诱",
+        category_en: "MLCC Capacitor",
+        category_zh: "多层陶瓷电容",
+        model: "JMK105BC6475MV-F",
+        specs: "",
+        feature_en: "Best price, authorized channel, stable supply",
+        feature_zh: "价格最优 代理渠道 供应稳定",
+        icon: "fas fa-battery-half"
+    },
+      {
         brand_en: "TDK",
         brand_zh: "TDK",
         category_en: "Power Inductor",
