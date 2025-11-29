@@ -193,7 +193,7 @@ const hotSellingModels = [
         brand_zh: "太阳诱电 太诱",
         category_en: "MLCC Capacitor",
         category_zh: "多层陶瓷电容",
-        model: "LDK063BBJ225MP-F",
+        model: "LDK063BBJ225MPLF",
         specs: "",
         feature_en: "Best price, authorized channel, stable supply",
         feature_zh: "价格最优 代理渠道 供应稳定",
