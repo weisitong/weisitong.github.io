@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Crystals & Oscillators - Electronic Components | Weyston Technology" data-zh="晶振与振荡器 - 电子元器件 | 纬思通科技">Crystals & Oscillators - Electronic Components | Weyston Technology</title>
+    
+    <meta name="description" content="专业晶振产品：石英晶体、陶瓷谐振器、时钟振荡器、TCXO/VCXO等，来自Epson爱普生、TKD泰晶、SII精工等知名品牌。Professional crystal and oscillator products including quartz crystals, ceramic resonators from leading manufacturers.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#042454',
+                        secondary: '#fbbf24',
+                        accent: '#374151',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('selectedLanguage');
+            if (savedLang) {
+                window.currentLang = savedLang;
+                document.documentElement.lang = savedLang;
+                if (savedLang !== 'en') {
+                    document.documentElement.classList.add('lang-loading');
+                }
+            }
+        })();
+    </script>
+    <style>
+        .lang-loading body { opacity: 0; transition: opacity 0.1s ease-in-out; }
+        body { opacity: 1; }
+        .menu-item { position: relative; }
+        .menu-item::after {
+            content: ''; position: absolute; bottom: -2px; left: 50%; width: 0; height: 2px;
+            background-color: #042454; transition: all 0.3s ease; transform: translateX(-50%);
+        }
+        .menu-item:hover::after { width: 100%; }
+        .mobile-menu-item { position: relative; }
+        .mobile-menu-item::before {
+            content: ''; position: absolute; left: 0; top: 50%; width: 0; height: 4px;
+            background-color: #042454; transition: all 0.3s ease; transform: translateY(-50%);
+        }
+        .mobile-menu-item:hover::before { width: 4px; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="./public/logo.jpeg" alt="纬思通科技" class="h-10 w-auto">
+                    </a>
+                    <div class="ml-3">
+                        <div class="text-primary font-bold text-lg" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="langToggle" class="bg-primary text-white px-3 py-1 rounded-md text-sm hover:bg-accent transition-colors">中文</button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-accent hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="mobileLangToggle" class="block w-full text-left px-3 py-2 bg-primary text-white rounded-md mt-2">中文</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="bg-gray-50 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-accent hover:text-primary" data-en="Home" data-zh="首页">Home</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <a href="products.html" class="text-accent hover:text-primary" data-en="Products" data-zh="产品">Products</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <span class="text-primary font-medium" data-en="Crystals & Oscillators" data-zh="晶振与振荡器">Crystals & Oscillators</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="relative text-white py-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-gradient-to-r from-primary to-accent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <div class="text-6xl mb-4"><i class="fas fa-gem"></i></div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-en="Crystals & Oscillators" data-zh="晶振与振荡器">Crystals & Oscillators</h1>
+                <p class="text-xl opacity-90" data-en="Precision timing solutions for accurate frequency generation" data-zh="用于精确频率产生的精密时序解决方案">Precision timing solutions for accurate frequency generation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-primary mb-6" data-en="What are Crystals & Oscillators?" data-zh="什么是晶振与振荡器？">What are Crystals & Oscillators?</h2>
+                    <p class="text-lg text-accent mb-6" data-en="Crystals and oscillators are precision timing components that generate stable, accurate frequencies for electronic systems. Think of them as the 'heartbeat' of electronic devices - they provide the timing reference that synchronizes all digital operations. Quartz crystals use the piezoelectric effect to vibrate at precise frequencies when electrical voltage is applied." data-zh="晶振和振荡器是为电子系统产生稳定、精确频率的精密时序元件。可以把它们想象成电子设备的'心跳' - 它们提供同步所有数字操作的时序基准。石英晶体利用压电效应在施加电压时以精确频率振动。">Crystals and oscillators are precision timing components that generate stable, accurate frequencies for electronic systems. Think of them as the 'heartbeat' of electronic devices - they provide the timing reference that synchronizes all digital operations. Quartz crystals use the piezoelectric effect to vibrate at precise frequencies when electrical voltage is applied.</p>
+                    <p class="text-accent mb-8" data-en="These components are essential in virtually every electronic device that requires timing - from simple digital clocks to complex microprocessors, communication systems, and precision measurement instruments. They ensure that data processing, communication protocols, and system operations occur at exactly the right time." data-zh="这些元件在几乎所有需要时序的电子设备中都是必不可少的 - 从简单的数字时钟到复杂的微处理器、通信系统和精密测量仪器。它们确保数据处理、通信协议和系统操作在准确的时间发生。">These components are essential in virtually every electronic device that requires timing - from simple digital clocks to complex microprocessors, communication systems, and precision measurement instruments. They ensure that data processing, communication protocols, and system operations occur at exactly the right time.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-50 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-4" data-en="Circuit Symbol" data-zh="电路符号">Circuit Symbol</h3>
+                        <div class="text-8xl text-primary mb-4">◊</div>
+                        <p class="text-accent" data-en="Diamond shape representing the crystal resonator" data-zh="菱形代表晶体谐振器">Diamond shape representing the crystal resonator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Principle -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="How Crystals Work" data-zh="晶体工作原理">How Crystals Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-bolt"></i></div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Piezoelectric Effect" data-zh="压电效应">Piezoelectric Effect</h3>
+                    <p class="text-accent" data-en="Applied voltage causes quartz crystal to deform mechanically" data-zh="施加电压使石英晶体发生机械变形">Applied voltage causes quartz crystal to deform mechanically</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-wave-square"></i></div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Mechanical Resonance" data-zh="机械谐振">Mechanical Resonance</h3>
+                    <p class="text-accent" data-en="Crystal vibrates at its natural resonant frequency" data-zh="晶体以其自然谐振频率振动">Crystal vibrates at its natural resonant frequency</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-sync-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Electrical Output" data-zh="电输出">Electrical Output</h3>
+                    <p class="text-accent" data-en="Mechanical vibration generates stable electrical signal" data-zh="机械振动产生稳定的电信号">Mechanical vibration generates stable electrical signal</p>
+                </div>
+            </div>
+            <div class="mt-12 bg-white rounded-lg p-8">
+                <h3 class="text-2xl font-bold text-primary mb-4" data-en="Frequency Stability" data-zh="频率稳定性">Frequency Stability</h3>
+                <p class="text-accent text-center" data-en="Quartz crystals provide exceptional frequency stability, typically within ±20 to ±100 parts per million (ppm) over temperature and time. This precision makes them ideal for applications requiring accurate timing, such as computer clocks, communication systems, and precision instruments." data-zh="石英晶体提供卓越的频率稳定性，通常在温度和时间变化下保持±20到±100 ppm的精度。这种精度使它们成为需要精确时序的应用的理想选择，如计算机时钟、通信系统和精密仪器。">Quartz crystals provide exceptional frequency stability, typically within ±20 to ±100 parts per million (ppm) over temperature and time. This precision makes them ideal for applications requiring accurate timing, such as computer clocks, communication systems, and precision instruments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="Crystal & Oscillator Types" data-zh="晶振与振荡器类型">Crystal & Oscillator Types</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="Quartz Crystals" data-zh="石英晶体">Quartz Crystals</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• Passive components requiring external circuitry" data-zh="• 需要外部电路的被动元件">• Passive components requiring external circuitry</li>
+                        <li data-en="• Ultra-high frequency stability" data-zh="• 超高频率稳定性">• Ultra-high frequency stability</li>
+                        <li data-en="• Low power consumption" data-zh="• 低功耗">• Low power consumption</li>
+                        <li data-en="• Wide frequency range: 32.768kHz to 200MHz+" data-zh="• 宽频率范围：32.768kHz到200MHz+">• Wide frequency range: 32.768kHz to 200MHz+</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="Crystal Oscillators" data-zh="晶体振荡器">Crystal Oscillators</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• Complete oscillator circuits with built-in amplification" data-zh="• 带内置放大的完整振荡器电路">• Complete oscillator circuits with built-in amplification</li>
+                        <li data-en="• Ready-to-use clock signals" data-zh="• 即用型时钟信号">• Ready-to-use clock signals</li>
+                        <li data-en="• Various output formats (CMOS, TTL, sine wave)" data-zh="• 各种输出格式（CMOS、TTL、正弦波）">• Various output formats (CMOS, TTL, sine wave)</li>
+                        <li data-en="• Enable/disable and standby functions" data-zh="• 使能/禁用和待机功能">• Enable/disable and standby functions</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="TCXO (Temperature Compensated)" data-zh="TCXO（温度补偿）">TCXO (Temperature Compensated)</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• Built-in temperature compensation circuitry" data-zh="• 内置温度补偿电路">• Built-in temperature compensation circuitry</li>
+                        <li data-en="• Superior frequency stability over temperature" data-zh="• 温度范围内的卓越频率稳定性">• Superior frequency stability over temperature</li>
+                        <li data-en="• Typical stability: ±0.5 to ±2.5 ppm" data-zh="• 典型稳定性：±0.5到±2.5 ppm">• Typical stability: ±0.5 to ±2.5 ppm</li>
+                        <li data-en="• Used in precision applications" data-zh="• 用于精密应用">• Used in precision applications</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="VCXO (Voltage Controlled)" data-zh="VCXO（压控）">VCXO (Voltage Controlled)</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• Frequency adjustable via control voltage" data-zh="• 通过控制电压调节频率">• Frequency adjustable via control voltage</li>
+                        <li data-en="• Used in phase-locked loops (PLLs)" data-zh="• 用于锁相环（PLL）">• Used in phase-locked loops (PLLs)</li>
+                        <li data-en="• Frequency modulation capability" data-zh="• 频率调制能力">• Frequency modulation capability</li>
+                        <li data-en="• Communication and timing applications" data-zh="• 通信和时序应用">• Communication and timing applications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Parameters -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="Key Parameters" data-zh="主要参数">Key Parameters</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Frequency (Hz)" data-zh="频率（Hz）">Frequency (Hz)</h3>
+                    <p class="text-accent mb-2" data-en="Fundamental oscillation frequency of the crystal" data-zh="晶体的基本振荡频率">Fundamental oscillation frequency of the crystal</p>
+                    <p class="text-sm text-gray-600" data-en="Range: 32.768kHz to several GHz" data-zh="范围：32.768kHz到几GHz">Range: 32.768kHz to several GHz</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Frequency Tolerance (ppm)" data-zh="频率精度（ppm）">Frequency Tolerance (ppm)</h3>
+                    <p class="text-accent mb-2" data-en="Initial frequency accuracy at room temperature" data-zh="室温下的初始频率精度">Initial frequency accuracy at room temperature</p>
+                    <p class="text-sm text-gray-600" data-en="Typical: ±10 to ±100 ppm" data-zh="典型：±10到±100 ppm">Typical: ±10 to ±100 ppm</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Temperature Stability" data-zh="温度稳定性">Temperature Stability</h3>
+                    <p class="text-accent mb-2" data-en="Frequency variation over operating temperature range" data-zh="工作温度范围内的频率变化">Frequency variation over operating temperature range</p>
+                    <p class="text-sm text-gray-600" data-en="Standard: ±20 to ±100 ppm" data-zh="标准：±20到±100 ppm">Standard: ±20 to ±100 ppm</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Load Capacitance (pF)" data-zh="负载电容（pF）">Load Capacitance (pF)</h3>
+                    <p class="text-accent mb-2" data-en="External capacitance required for proper oscillation" data-zh="正常振荡所需的外部电容">External capacitance required for proper oscillation</p>
+                    <p class="text-sm text-gray-600" data-en="Common: 8pF, 12pF, 18pF, 20pF" data-zh="常见：8pF、12pF、18pF、20pF">Common: 8pF, 12pF, 18pF, 20pF</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="ESR (Equivalent Series Resistance)" data-zh="ESR（等效串联电阻）">ESR (Equivalent Series Resistance)</h3>
+                    <p class="text-accent mb-2" data-en="Internal resistance affecting oscillation startup" data-zh="影响振荡启动的内阻">Internal resistance affecting oscillation startup</p>
+                    <p class="text-sm text-gray-600" data-en="Lower ESR enables easier startup" data-zh="更低的ESR使启动更容易">Lower ESR enables easier startup</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Aging Rate" data-zh="老化率">Aging Rate</h3>
+                    <p class="text-accent mb-2" data-en="Long-term frequency drift over time" data-zh="长期频率随时间的漂移">Long-term frequency drift over time</p>
+                    <p class="text-sm text-gray-600" data-en="Typical: ±1 to ±5 ppm/year" data-zh="典型：±1到±5 ppm/年">Typical: ±1 to ±5 ppm/year</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="Applications & Use Cases" data-zh="应用与使用场景">Applications & Use Cases</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-microchip"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Microprocessor Clocks" data-zh="微处理器时钟">Microprocessor Clocks</h3>
+                    <p class="text-accent" data-en="Provide system clock for CPUs and microcontrollers" data-zh="为CPU和微控制器提供系统时钟">Provide system clock for CPUs and microcontrollers</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-wifi"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Communication Systems" data-zh="通信系统">Communication Systems</h3>
+                    <p class="text-accent" data-en="Frequency references for wireless and wired communications" data-zh="无线和有线通信的频率基准">Frequency references for wireless and wired communications</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-clock"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Real-Time Clocks (RTC)" data-zh="实时时钟（RTC）">Real-Time Clocks (RTC)</h3>
+                    <p class="text-accent" data-en="32.768kHz crystals for timekeeping in electronic devices" data-zh="32.768kHz晶体用于电子设备的计时">32.768kHz crystals for timekeeping in electronic devices</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-satellite"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="GPS & Navigation" data-zh="GPS与导航">GPS & Navigation</h3>
+                    <p class="text-accent" data-en="High-precision timing for satellite navigation systems" data-zh="卫星导航系统的高精度时序">High-precision timing for satellite navigation systems</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-car"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Automotive Electronics" data-zh="汽车电子">Automotive Electronics</h3>
+                    <p class="text-accent" data-en="Engine control, infotainment, and safety systems timing" data-zh="发动机控制、信息娱乐和安全系统时序">Engine control, infotainment, and safety systems timing</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-heartbeat"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Medical Devices" data-zh="医疗设备">Medical Devices</h3>
+                    <p class="text-accent" data-en="Precision timing for monitoring and diagnostic equipment" data-zh="监测和诊断设备的精密时序">Precision timing for monitoring and diagnostic equipment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Links -->
+    <section class="py-12 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-bold mb-6" data-en="Explore More" data-zh="了解更多">Explore More</h3>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="products.html" class="bg-secondary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors inline-block" data-en="← Back to Products" data-zh="← 返回产品">← Back to Products</a>
+                <a href="partners.html" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" data-en="Browse Partners" data-zh="浏览合作伙伴">Browse Partners</a>
+                <a href="contact.html" class="bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors inline-block" data-en="Get Quote" data-zh="获取报价">Get Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="./public/logo.jpeg" alt="Weyston Technology" class="h-8 w-auto mr-3">
+                    <div>
+                        <div class="font-bold" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                        <div class="text-sm opacity-75" data-en="One-Stop Electronic Components Procurement Service Provider" data-zh="一站式电子元器件采购服务供应商">One-Stop Electronic Components Procurement Service Provider</div>
+                    </div>
+                </div>
+                <div class="text-sm opacity-75">
+                    <span data-en="© 2024 Weyston Technology. All rights reserved." data-zh="© 2024 纬思通科技。保留所有权利。">© 2024 Weyston Technology. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/common.js"></script>
+</body>
+</html>

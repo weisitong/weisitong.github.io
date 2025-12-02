@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Resistors - Electronic Components | Weyston Technology" data-zh="电阻器 - 电子元器件 | 纬思通科技">Resistors - Electronic Components | Weyston Technology</title>
+    
+    <meta name="description" content="专业电阻器产品：贴片电阻、精密电阻、功率电阻、可变电阻等，来自Yageo国巨、UNI-ROYAL厚声等知名品牌。Professional resistor products including chip resistors, precision resistors, power resistors from leading manufacturers.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#042454',
+                        secondary: '#fbbf24',
+                        accent: '#374151',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('selectedLanguage');
+            if (savedLang) {
+                window.currentLang = savedLang;
+                document.documentElement.lang = savedLang;
+                if (savedLang !== 'en') {
+                    document.documentElement.classList.add('lang-loading');
+                }
+            }
+        })();
+    </script>
+    <style>
+        .lang-loading body { opacity: 0; transition: opacity 0.1s ease-in-out; }
+        body { opacity: 1; }
+        .menu-item { position: relative; }
+        .menu-item::after {
+            content: ''; position: absolute; bottom: -2px; left: 50%; width: 0; height: 2px;
+            background-color: #042454; transition: all 0.3s ease; transform: translateX(-50%);
+        }
+        .menu-item:hover::after { width: 100%; }
+        .mobile-menu-item { position: relative; }
+        .mobile-menu-item::before {
+            content: ''; position: absolute; left: 0; top: 50%; width: 0; height: 4px;
+            background-color: #042454; transition: all 0.3s ease; transform: translateY(-50%);
+        }
+        .mobile-menu-item:hover::before { width: 4px; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="./public/logo.jpeg" alt="纬思通科技" class="h-10 w-auto">
+                    </a>
+                    <div class="ml-3">
+                        <div class="text-primary font-bold text-lg" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="langToggle" class="bg-primary text-white px-3 py-1 rounded-md text-sm hover:bg-accent transition-colors">中文</button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-accent hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="mobileLangToggle" class="block w-full text-left px-3 py-2 bg-primary text-white rounded-md mt-2">中文</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="bg-gray-50 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-accent hover:text-primary" data-en="Home" data-zh="首页">Home</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <a href="products.html" class="text-accent hover:text-primary" data-en="Products" data-zh="产品">Products</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <span class="text-primary font-medium" data-en="Resistors" data-zh="电阻器">Resistors</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="relative text-white py-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-gradient-to-r from-primary to-accent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <div class="text-6xl mb-4"><i class="fas fa-bolt"></i></div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-en="Resistors" data-zh="电阻器">Resistors</h1>
+                <p class="text-xl opacity-90" data-en="Precision resistors for current limiting and voltage division" data-zh="用于限流和分压的精密电阻器">Precision resistors for current limiting and voltage division</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-primary mb-6" data-en="What is a Resistor?" data-zh="什么是电阻器？">What is a Resistor?</h2>
+                    <p class="text-lg text-accent mb-6" data-en="A resistor is a passive electronic component that limits or regulates the flow of electrical current in an electronic circuit. Think of it as a 'speed bump' for electricity - it slows down the current flow and converts excess electrical energy into heat." data-zh="电阻器是一种被动电子元件，用于限制或调节电子电路中的电流流动。可以把它想象成电流的'减速带' - 它减慢电流流动并将多余的电能转换为热能。">A resistor is a passive electronic component that limits or regulates the flow of electrical current in an electronic circuit. Think of it as a 'speed bump' for electricity - it slows down the current flow and converts excess electrical energy into heat.</p>
+                    <p class="text-accent mb-8" data-en="Resistors are fundamental components in virtually every electronic device, from simple LED circuits to complex computer processors. They ensure that other components receive the correct amount of current and voltage to function properly." data-zh="电阻器是几乎所有电子设备中的基础元件，从简单的LED电路到复杂的计算机处理器。它们确保其他元件接收到正确的电流和电压以正常工作。">Resistors are fundamental components in virtually every electronic device, from simple LED circuits to complex computer processors. They ensure that other components receive the correct amount of current and voltage to function properly.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-50 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-4" data-en="Circuit Symbol" data-zh="电路符号">Circuit Symbol</h3>
+                        <div class="text-8xl text-primary mb-4">⟲</div>
+                        <p class="text-accent" data-en="International standard resistor symbol (zigzag line)" data-zh="国际标准电阻器符号（锯齿线）">International standard resistor symbol (zigzag line)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Principle -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="How Resistors Work" data-zh="电阻器工作原理">How Resistors Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-arrow-right"></i></div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Current Flow" data-zh="电流流动">Current Flow</h3>
+                    <p class="text-accent" data-en="Electric current flows through the resistive material" data-zh="电流通过电阻材料流动">Electric current flows through the resistive material</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-compress-arrows-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Resistance" data-zh="电阻作用">Resistance</h3>
+                    <p class="text-accent" data-en="Material opposes current flow, creating voltage drop" data-zh="材料阻碍电流流动，产生电压降">Material opposes current flow, creating voltage drop</p>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-thermometer-half"></i></div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Heat Generation" data-zh="热量产生">Heat Generation</h3>
+                    <p class="text-accent" data-en="Electrical energy converts to heat energy (Joule heating)" data-zh="电能转换为热能（焦耳加热）">Electrical energy converts to heat energy (Joule heating)</p>
+                </div>
+            </div>
+            <div class="mt-12 bg-white rounded-lg p-8">
+                <h3 class="text-2xl font-bold text-primary mb-4" data-en="Ohm's Law" data-zh="欧姆定律">Ohm's Law</h3>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary mb-4">V = I × R</div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-accent">
+                        <div><strong>V</strong> = <span data-en="Voltage (Volts)" data-zh="电压（伏特）">Voltage (Volts)</span></div>
+                        <div><strong>I</strong> = <span data-en="Current (Amperes)" data-zh="电流（安培）">Current (Amperes)</span></div>
+                        <div><strong>R</strong> = <span data-en="Resistance (Ohms)" data-zh="电阻（欧姆）">Resistance (Ohms)</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="Resistor Types" data-zh="电阻器类型">Resistor Types</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="Chip Resistors (SMD)" data-zh="贴片电阻（SMD）">Chip Resistors (SMD)</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• Surface mount technology for compact designs" data-zh="• 表面贴装技术，适用于紧凑设计">• Surface mount technology for compact designs</li>
+                        <li data-en="• Common sizes: 0201, 0402, 0603, 0805, 1206" data-zh="• 常见尺寸：0201、0402、0603、0805、1206">• Common sizes: 0201, 0402, 0603, 0805, 1206</li>
+                        <li data-en="• High precision and stability" data-zh="• 高精度和稳定性">• High precision and stability</li>
+                        <li data-en="• Automated assembly compatible" data-zh="• 兼容自动化组装">• Automated assembly compatible</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="Through-hole Resistors" data-zh="插件电阻">Through-hole Resistors</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• Traditional leaded components" data-zh="• 传统引脚元件">• Traditional leaded components</li>
+                        <li data-en="• Easy to handle and replace" data-zh="• 易于处理和更换">• Easy to handle and replace</li>
+                        <li data-en="• Better heat dissipation" data-zh="• 更好的散热性能">• Better heat dissipation</li>
+                        <li data-en="• Suitable for prototyping" data-zh="• 适用于原型制作">• Suitable for prototyping</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="Power Resistors" data-zh="功率电阻">Power Resistors</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• High power handling capability (>1W)" data-zh="• 高功率处理能力（>1W）">• High power handling capability (>1W)</li>
+                        <li data-en="• Excellent thermal management" data-zh="• 优秀的热管理">• Excellent thermal management</li>
+                        <li data-en="• Used in power supplies and motor drives" data-zh="• 用于电源和电机驱动">• Used in power supplies and motor drives</li>
+                        <li data-en="• Various mounting options" data-zh="• 多种安装选项">• Various mounting options</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="Variable Resistors" data-zh="可变电阻">Variable Resistors</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• Adjustable resistance value" data-zh="• 可调节电阻值">• Adjustable resistance value</li>
+                        <li data-en="• Potentiometers and trimmers" data-zh="• 电位器和微调电阻">• Potentiometers and trimmers</li>
+                        <li data-en="• Volume controls and calibration" data-zh="• 音量控制和校准">• Volume controls and calibration</li>
+                        <li data-en="• Linear and logarithmic tapers" data-zh="• 线性和对数锥度">• Linear and logarithmic tapers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Parameters -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="Key Parameters" data-zh="主要参数">Key Parameters</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Resistance Value (Ω)" data-zh="电阻值（Ω）">Resistance Value (Ω)</h3>
+                    <p class="text-accent mb-2" data-en="The opposition to current flow, measured in Ohms" data-zh="对电流流动的阻碍，以欧姆为单位测量">The opposition to current flow, measured in Ohms</p>
+                    <p class="text-sm text-gray-600" data-en="Range: mΩ to GΩ" data-zh="范围：毫欧到吉欧">Range: mΩ to GΩ</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Tolerance (%)" data-zh="精度（%）">Tolerance (%)</h3>
+                    <p class="text-accent mb-2" data-en="Acceptable deviation from nominal resistance value" data-zh="与标称电阻值的允许偏差">Acceptable deviation from nominal resistance value</p>
+                    <p class="text-sm text-gray-600" data-en="Common: ±1%, ±5%, ±10%" data-zh="常见：±1%、±5%、±10%">Common: ±1%, ±5%, ±10%</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Power Rating (W)" data-zh="功率额定值（W）">Power Rating (W)</h3>
+                    <p class="text-accent mb-2" data-en="Maximum power the resistor can safely dissipate" data-zh="电阻器能够安全耗散的最大功率">Maximum power the resistor can safely dissipate</p>
+                    <p class="text-sm text-gray-600" data-en="Range: 1/32W to 100W+" data-zh="范围：1/32W到100W+">Range: 1/32W to 100W+</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Temperature Coefficient" data-zh="温度系数">Temperature Coefficient</h3>
+                    <p class="text-accent mb-2" data-en="Resistance change per degree temperature change" data-zh="每度温度变化的电阻变化">Resistance change per degree temperature change</p>
+                    <p class="text-sm text-gray-600" data-en="Typical: ±50 to ±200 ppm/°C" data-zh="典型：±50到±200 ppm/°C">Typical: ±50 to ±200 ppm/°C</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Voltage Rating (V)" data-zh="电压额定值（V）">Voltage Rating (V)</h3>
+                    <p class="text-accent mb-2" data-en="Maximum voltage that can be applied safely" data-zh="可以安全施加的最大电压">Maximum voltage that can be applied safely</p>
+                    <p class="text-sm text-gray-600" data-en="Depends on size and construction" data-zh="取决于尺寸和结构">Depends on size and construction</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Package Size" data-zh="封装尺寸">Package Size</h3>
+                    <p class="text-accent mb-2" data-en="Physical dimensions affecting power and precision" data-zh="影响功率和精度的物理尺寸">Physical dimensions affecting power and precision</p>
+                    <p class="text-sm text-gray-600" data-en="SMD: 0201 to 2512, THT: Various" data-zh="SMD：0201到2512，THT：各种">SMD: 0201 to 2512, THT: Various</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="Applications & Use Cases" data-zh="应用与使用场景">Applications & Use Cases</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="LED Current Limiting" data-zh="LED限流">LED Current Limiting</h3>
+                    <p class="text-accent" data-en="Protect LEDs from excessive current that could damage them" data-zh="保护LED免受可能损坏它们的过大电流">Protect LEDs from excessive current that could damage them</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-divide"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Voltage Division" data-zh="分压">Voltage Division</h3>
+                    <p class="text-accent" data-en="Create specific voltage levels for different circuit sections" data-zh="为不同电路部分创建特定电压电平">Create specific voltage levels for different circuit sections</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-arrow-up"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Pull-up/Pull-down" data-zh="上拉/下拉">Pull-up/Pull-down</h3>
+                    <p class="text-accent" data-en="Ensure digital inputs have defined logic states" data-zh="确保数字输入具有明确的逻辑状态">Ensure digital inputs have defined logic states</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-filter"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Filtering Circuits" data-zh="滤波电路">Filtering Circuits</h3>
+                    <p class="text-accent" data-en="Combined with capacitors to filter unwanted frequencies" data-zh="与电容器结合以滤除不需要的频率">Combined with capacitors to filter unwanted frequencies</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-volume-up"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Audio Controls" data-zh="音频控制">Audio Controls</h3>
+                    <p class="text-accent" data-en="Volume controls and tone adjustments in audio equipment" data-zh="音频设备中的音量控制和音调调节">Volume controls and tone adjustments in audio equipment</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-thermometer-half"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Temperature Sensing" data-zh="温度传感">Temperature Sensing</h3>
+                    <p class="text-accent" data-en="Thermistors for temperature measurement and control" data-zh="热敏电阻用于温度测量和控制">Thermistors for temperature measurement and control</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Links -->
+    <section class="py-12 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-bold mb-6" data-en="Explore More" data-zh="了解更多">Explore More</h3>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="products.html" class="bg-secondary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors inline-block" data-en="← Back to Products" data-zh="← 返回产品">← Back to Products</a>
+                <a href="partners.html" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" data-en="Browse Partners" data-zh="浏览合作伙伴">Browse Partners</a>
+                <a href="contact.html" class="bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors inline-block" data-en="Get Quote" data-zh="获取报价">Get Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="./public/logo.jpeg" alt="Weyston Technology" class="h-8 w-auto mr-3">
+                    <div>
+                        <div class="font-bold" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                        <div class="text-sm opacity-75" data-en="One-Stop Electronic Components Procurement Service Provider" data-zh="一站式电子元器件采购服务供应商">One-Stop Electronic Components Procurement Service Provider</div>
+                    </div>
+                </div>
+                <div class="text-sm opacity-75">
+                    <span data-en="© 2024 Weyston Technology. All rights reserved." data-zh="© 2024 纬思通科技。保留所有权利。">© 2024 Weyston Technology. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/common.js"></script>
+</body>
+</html>

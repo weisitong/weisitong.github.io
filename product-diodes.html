@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Diodes - Electronic Components | Weyston Technology" data-zh="二极管 - 电子元器件 | 纬思通科技">Diodes - Electronic Components | Weyston Technology</title>
+    
+    <meta name="description" content="专业二极管产品：肖特基二极管、TVS二极管、整流二极管、齐纳二极管等，用于保护和电源管理。Professional diode products including Schottky, TVS, rectifier, Zener diodes for protection and power management.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#042454',
+                        secondary: '#fbbf24',
+                        accent: '#374151',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('selectedLanguage');
+            if (savedLang) {
+                window.currentLang = savedLang;
+                document.documentElement.lang = savedLang;
+                if (savedLang !== 'en') {
+                    document.documentElement.classList.add('lang-loading');
+                }
+            }
+        })();
+    </script>
+    <style>
+        .lang-loading body { opacity: 0; transition: opacity 0.1s ease-in-out; }
+        body { opacity: 1; }
+        .menu-item { position: relative; }
+        .menu-item::after {
+            content: ''; position: absolute; bottom: -2px; left: 50%; width: 0; height: 2px;
+            background-color: #042454; transition: all 0.3s ease; transform: translateX(-50%);
+        }
+        .menu-item:hover::after { width: 100%; }
+        .mobile-menu-item { position: relative; }
+        .mobile-menu-item::before {
+            content: ''; position: absolute; left: 0; top: 50%; width: 0; height: 4px;
+            background-color: #042454; transition: all 0.3s ease; transform: translateY(-50%);
+        }
+        .mobile-menu-item:hover::before { width: 4px; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="./public/logo.jpeg" alt="纬思通科技" class="h-10 w-auto">
+                    </a>
+                    <div class="ml-3">
+                        <div class="text-primary font-bold text-lg" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="langToggle" class="bg-primary text-white px-3 py-1 rounded-md text-sm hover:bg-accent transition-colors">中文</button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-accent hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="mobileLangToggle" class="block w-full text-left px-3 py-2 bg-primary text-white rounded-md mt-2">中文</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="bg-gray-50 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 text-sm">
+                <a href="index.html" class="text-accent hover:text-primary" data-en="Home" data-zh="首页">Home</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <a href="products.html" class="text-accent hover:text-primary" data-en="Products" data-zh="产品">Products</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <span class="text-primary font-medium" data-en="Diodes" data-zh="二极管">Diodes</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="relative text-white py-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-gradient-to-r from-primary to-accent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <div class="text-6xl mb-4"><i class="fas fa-play"></i></div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-en="Diodes" data-zh="二极管">Diodes</h1>
+                <p class="text-xl opacity-90" data-en="Semiconductor devices for rectification, protection, and voltage regulation" data-zh="用于整流、保护和电压调节的半导体器件">Semiconductor devices for rectification, protection, and voltage regulation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-primary mb-6" data-en="What is a Diode?" data-zh="什么是二极管？">What is a Diode?</h2>
+                    <p class="text-lg text-accent mb-6" data-en="A diode is a semiconductor device that allows electric current to flow in only one direction. Think of it as an electrical one-way valve - current can flow from the anode (positive side) to the cathode (negative side), but not in the reverse direction. This unique property makes diodes essential for converting AC to DC, protecting circuits, and regulating voltage." data-zh="二极管是一种只允许电流单向流动的半导体器件。可以把它想象成电气单向阀 - 电流可以从阳极（正极）流向阴极（负极），但不能反向流动。这种独特的特性使二极管在交流转直流、电路保护和电压调节方面至关重要。">A diode is a semiconductor device that allows electric current to flow in only one direction. Think of it as an electrical one-way valve - current can flow from the anode (positive side) to the cathode (negative side), but not in the reverse direction. This unique property makes diodes essential for converting AC to DC, protecting circuits, and regulating voltage.</p>
+                    <p class="text-accent mb-8" data-en="Diodes are fundamental building blocks in electronic circuits, found in power supplies, LED lighting, solar panels, and protection circuits. They come in various types, each optimized for specific applications like high-speed switching, voltage regulation, or surge protection." data-zh="二极管是电子电路中的基本构建块，存在于电源、LED照明、太阳能电池板和保护电路中。它们有各种类型，每种都针对特定应用进行了优化，如高速开关、电压调节或浪涌保护。">Diodes are fundamental building blocks in electronic circuits, found in power supplies, LED lighting, solar panels, and protection circuits. They come in various types, each optimized for specific applications like high-speed switching, voltage regulation, or surge protection.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-50 rounded-lg p-8">
+                        <h3 class="text-2xl font-bold text-primary mb-4" data-en="Circuit Symbol" data-zh="电路符号">Circuit Symbol</h3>
+                        <div class="text-8xl text-primary mb-4">▷|</div>
+                        <p class="text-accent" data-en="Triangle pointing to a line (anode to cathode)" data-zh="三角形指向一条线（阳极到阴极）">Triangle pointing to a line (anode to cathode)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Principle -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="How Diodes Work" data-zh="二极管工作原理">How Diodes Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-arrow-right"></i></div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Forward Bias" data-zh="正向偏置">Forward Bias</h3>
+                    <p class="text-accent mb-4" data-en="When anode is positive relative to cathode, current flows easily" data-zh="当阳极相对于阴极为正时，电流容易流动">When anode is positive relative to cathode, current flows easily</p>
+                    <ul class="text-sm text-gray-600 text-left">
+                        <li data-en="• Low resistance path" data-zh="• 低阻抗路径">• Low resistance path</li>
+                        <li data-en="• Voltage drop ~0.7V (Silicon)" data-zh="• 电压降约0.7V（硅）">• Voltage drop ~0.7V (Silicon)</li>
+                        <li data-en="• Current flows freely" data-zh="• 电流自由流动">• Current flows freely</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg p-6 text-center">
+                    <div class="text-4xl text-primary mb-4"><i class="fas fa-ban"></i></div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Reverse Bias" data-zh="反向偏置">Reverse Bias</h3>
+                    <p class="text-accent mb-4" data-en="When cathode is positive relative to anode, current is blocked" data-zh="当阴极相对于阳极为正时，电流被阻断">When cathode is positive relative to anode, current is blocked</p>
+                    <ul class="text-sm text-gray-600 text-left">
+                        <li data-en="• High resistance path" data-zh="• 高阻抗路径">• High resistance path</li>
+                        <li data-en="• Only tiny leakage current" data-zh="• 只有微小漏电流">• Only tiny leakage current</li>
+                        <li data-en="• Acts like open circuit" data-zh="• 表现为开路">• Acts like open circuit</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 bg-white rounded-lg p-8">
+                <h3 class="text-2xl font-bold text-primary mb-4" data-en="PN Junction" data-zh="PN结">PN Junction</h3>
+                <p class="text-accent text-center" data-en="A diode consists of P-type (positive) and N-type (negative) semiconductor materials joined together. The junction between these materials creates a depletion zone that controls current flow direction." data-zh="二极管由P型（正型）和N型（负型）半导体材料结合而成。这些材料之间的结形成了控制电流流向的耗尽区。">A diode consists of P-type (positive) and N-type (negative) semiconductor materials joined together. The junction between these materials creates a depletion zone that controls current flow direction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="Diode Types" data-zh="二极管类型">Diode Types</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="Schottky Diodes" data-zh="肖特基二极管">Schottky Diodes</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• Low forward voltage drop (~0.3V)" data-zh="• 低正向压降（约0.3V）">• Low forward voltage drop (~0.3V)</li>
+                        <li data-en="• Fast switching speed" data-zh="• 快速开关速度">• Fast switching speed</li>
+                        <li data-en="• High efficiency in power applications" data-zh="• 功率应用中的高效率">• High efficiency in power applications</li>
+                        <li data-en="• Used in switching power supplies" data-zh="• 用于开关电源">• Used in switching power supplies</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="TVS Diodes" data-zh="TVS二极管">TVS Diodes</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• Transient Voltage Suppression" data-zh="• 瞬态电压抑制">• Transient Voltage Suppression</li>
+                        <li data-en="• Fast response to voltage spikes" data-zh="• 对电压尖峰快速响应">• Fast response to voltage spikes</li>
+                        <li data-en="• Protects sensitive components" data-zh="• 保护敏感元件">• Protects sensitive components</li>
+                        <li data-en="• ESD and surge protection" data-zh="• ESD和浪涌保护">• ESD and surge protection</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="Rectifier Diodes" data-zh="整流二极管">Rectifier Diodes</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• Convert AC to DC current" data-zh="• 将交流转换为直流">• Convert AC to DC current</li>
+                        <li data-en="• High current handling capability" data-zh="• 高电流处理能力">• High current handling capability</li>
+                        <li data-en="• Used in power supplies" data-zh="• 用于电源">• Used in power supplies</li>
+                        <li data-en="• Available in various packages" data-zh="• 提供各种封装">• Available in various packages</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-primary mb-4" data-en="Zener Diodes" data-zh="齐纳二极管">Zener Diodes</h3>
+                    <ul class="space-y-2 text-accent">
+                        <li data-en="• Voltage regulation in reverse bias" data-zh="• 反向偏置时的电压调节">• Voltage regulation in reverse bias</li>
+                        <li data-en="• Precise breakdown voltage" data-zh="• 精确的击穿电压">• Precise breakdown voltage</li>
+                        <li data-en="• Used as voltage references" data-zh="• 用作电压基准">• Used as voltage references</li>
+                        <li data-en="• Overvoltage protection" data-zh="• 过压保护">• Overvoltage protection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Parameters -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="Key Parameters" data-zh="主要参数">Key Parameters</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Forward Voltage (Vf)" data-zh="正向电压（Vf）">Forward Voltage (Vf)</h3>
+                    <p class="text-accent mb-2" data-en="Voltage drop when conducting in forward direction" data-zh="正向导通时的电压降">Voltage drop when conducting in forward direction</p>
+                    <p class="text-sm text-gray-600" data-en="Silicon: ~0.7V, Schottky: ~0.3V" data-zh="硅：约0.7V，肖特基：约0.3V">Silicon: ~0.7V, Schottky: ~0.3V</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Reverse Voltage (Vr)" data-zh="反向电压（Vr）">Reverse Voltage (Vr)</h3>
+                    <p class="text-accent mb-2" data-en="Maximum reverse voltage before breakdown" data-zh="击穿前的最大反向电压">Maximum reverse voltage before breakdown</p>
+                    <p class="text-sm text-gray-600" data-en="Also called Peak Inverse Voltage (PIV)" data-zh="也称为峰值反向电压（PIV）">Also called Peak Inverse Voltage (PIV)</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Forward Current (If)" data-zh="正向电流（If）">Forward Current (If)</h3>
+                    <p class="text-accent mb-2" data-en="Maximum continuous forward current rating" data-zh="最大连续正向电流额定值">Maximum continuous forward current rating</p>
+                    <p class="text-sm text-gray-600" data-en="Determines power handling capability" data-zh="决定功率处理能力">Determines power handling capability</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Reverse Current (Ir)" data-zh="反向电流（Ir）">Reverse Current (Ir)</h3>
+                    <p class="text-accent mb-2" data-en="Small leakage current in reverse bias" data-zh="反向偏置时的小漏电流">Small leakage current in reverse bias</p>
+                    <p class="text-sm text-gray-600" data-en="Lower is better for most applications" data-zh="对大多数应用来说越低越好">Lower is better for most applications</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Recovery Time" data-zh="恢复时间">Recovery Time</h3>
+                    <p class="text-accent mb-2" data-en="Time to switch from forward to reverse bias" data-zh="从正向偏置切换到反向偏置的时间">Time to switch from forward to reverse bias</p>
+                    <p class="text-sm text-gray-600" data-en="Critical for high-frequency applications" data-zh="对高频应用至关重要">Critical for high-frequency applications</p>
+                </div>
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="text-lg font-bold text-primary mb-3" data-en="Junction Capacitance" data-zh="结电容">Junction Capacitance</h3>
+                    <p class="text-accent mb-2" data-en="Parasitic capacitance at the PN junction" data-zh="PN结处的寄生电容">Parasitic capacitance at the PN junction</p>
+                    <p class="text-sm text-gray-600" data-en="Affects high-frequency performance" data-zh="影响高频性能">Affects high-frequency performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-primary text-center mb-12" data-en="Applications & Use Cases" data-zh="应用与使用场景">Applications & Use Cases</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-plug"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Power Supply Rectification" data-zh="电源整流">Power Supply Rectification</h3>
+                    <p class="text-accent" data-en="Convert AC mains power to DC for electronic devices" data-zh="将交流市电转换为电子设备所需的直流电">Convert AC mains power to DC for electronic devices</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Circuit Protection" data-zh="电路保护">Circuit Protection</h3>
+                    <p class="text-accent" data-en="Protect sensitive components from voltage spikes and ESD" data-zh="保护敏感元件免受电压尖峰和ESD影响">Protect sensitive components from voltage spikes and ESD</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-battery-half"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Reverse Polarity Protection" data-zh="反极性保护">Reverse Polarity Protection</h3>
+                    <p class="text-accent" data-en="Prevent damage from incorrect battery or power connections" data-zh="防止电池或电源连接错误造成的损坏">Prevent damage from incorrect battery or power connections</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-sun"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Solar Panel Systems" data-zh="太阳能电池板系统">Solar Panel Systems</h3>
+                    <p class="text-accent" data-en="Prevent reverse current flow in photovoltaic systems" data-zh="防止光伏系统中的反向电流">Prevent reverse current flow in photovoltaic systems</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="Voltage Regulation" data-zh="电压调节">Voltage Regulation</h3>
+                    <p class="text-accent" data-en="Maintain stable voltage levels using Zener diodes" data-zh="使用齐纳二极管维持稳定的电压水平">Maintain stable voltage levels using Zener diodes</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="text-3xl text-primary mb-4"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="text-lg font-bold mb-3" data-en="LED Lighting" data-zh="LED照明">LED Lighting</h3>
+                    <p class="text-accent" data-en="Light Emitting Diodes for efficient illumination" data-zh="发光二极管用于高效照明">Light Emitting Diodes for efficient illumination</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Links -->
+    <section class="py-12 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-2xl font-bold mb-6" data-en="Explore More" data-zh="了解更多">Explore More</h3>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="products.html" class="bg-secondary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors inline-block" data-en="← Back to Products" data-zh="← 返回产品">← Back to Products</a>
+                <a href="partners.html" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" data-en="Browse Partners" data-zh="浏览合作伙伴">Browse Partners</a>
+                <a href="contact.html" class="bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors inline-block" data-en="Get Quote" data-zh="获取报价">Get Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="./public/logo.jpeg" alt="Weyston Technology" class="h-8 w-auto mr-3">
+                    <div>
+                        <div class="font-bold" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                        <div class="text-sm opacity-75" data-en="One-Stop Electronic Components Procurement Service Provider" data-zh="一站式电子元器件采购服务供应商">One-Stop Electronic Components Procurement Service Provider</div>
+                    </div>
+                </div>
+                <div class="text-sm opacity-75">
+                    <span data-en="© 2024 Weyston Technology. All rights reserved." data-zh="© 2024 纬思通科技。保留所有权利。">© 2024 Weyston Technology. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/common.js"></script>
+</body>
+</html>

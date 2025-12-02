@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Inductors - Electronic Components | Weyston Technology" data-zh="电感器 - 电子元器件 | 纬思通科技">Inductors - Electronic Components | Weyston Technology</title>
+    
+    <meta name="description" content="专业电感器产品：功率电感、射频电感、共模扼流圈、磁珠等，详细介绍工作原理、分类、参数和应用场景。Professional inductor products with comprehensive specifications and applications.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#042454',
+                        secondary: '#fbbf24',
+                        accent: '#374151',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('selectedLanguage');
+            if (savedLang) {
+                window.currentLang = savedLang;
+                document.documentElement.lang = savedLang;
+                if (savedLang !== 'en') {
+                    document.documentElement.classList.add('lang-loading');
+                }
+            }
+        })();
+    </script>
+    <style>
+        .lang-loading body { opacity: 0; transition: opacity 0.1s ease-in-out; }
+        body { opacity: 1; }
+        .menu-item { position: relative; }
+        .menu-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #042454;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .menu-item:hover::after { width: 100%; }
+        .mobile-menu-item { position: relative; }
+        .mobile-menu-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 4px;
+            background-color: #042454;
+            transition: all 0.3s ease;
+            transform: translateY(-50%);
+        }
+        .mobile-menu-item:hover::before { width: 4px; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="./public/logo.jpeg" alt="Weyston Technology" class="h-10 w-auto">
+                    </a>
+                    <div class="ml-3">
+                        <div class="text-primary font-bold text-lg" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="langToggle" class="bg-primary text-white px-3 py-1 rounded-md text-sm hover:bg-slate-500 transition-colors">中文</button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-accent hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="mobileLangToggle" class="block w-full text-left px-3 py-2 bg-primary text-white rounded-md mt-2">中文</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="bg-gray-50 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm">
+                <a href="index.html" class="text-primary hover:text-accent" data-en="Home" data-zh="首页">Home</a>
+                <span class="mx-2 text-gray-500">/</span>
+                <a href="products.html" class="text-primary hover:text-accent" data-en="Products" data-zh="产品">Products</a>
+                <span class="mx-2 text-gray-500">/</span>
+                <span class="text-gray-600" data-en="Inductors" data-zh="电感器">Inductors</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="relative text-white py-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
+                 alt="Inductors Background" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gray-900/40"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center relative z-10">
+                <div class="text-6xl mb-4">
+                    <i class="fas fa-circle-notch"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-en="Inductors" data-zh="电感器">Inductors</h1>
+                <p class="text-xl opacity-90" data-en="Magnetic energy storage components for filtering, energy conversion, and signal processing" data-zh="用于滤波、能量转换和信号处理的磁能储存元器件">Magnetic energy storage components for filtering, energy conversion, and signal processing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h2 class="text-3xl font-bold text-primary mb-6" data-en="What are Inductors?" data-zh="什么是电感器？">What are Inductors?</h2>
+                    <p class="text-lg text-accent mb-6" data-en="Inductors are passive electronic components that store energy in a magnetic field when electrical current flows through them. They consist of a coil of wire, often wound around a magnetic core. Inductors oppose changes in current flow, making them essential for filtering, energy storage, and signal processing applications." data-zh="电感器是被动电子元器件，当电流流过时在磁场中储存能量。它们由线圈组成，通常绕在磁芯上。电感器阻止电流变化，使它们在滤波、储能和信号处理应用中至关重要。">Inductors are passive electronic components that store energy in a magnetic field when electrical current flows through them. They consist of a coil of wire, often wound around a magnetic core. Inductors oppose changes in current flow, making them essential for filtering, energy storage, and signal processing applications.</p>
+                    <p class="text-accent mb-8" data-en="Think of an inductor like a flywheel in a mechanical system - just as a flywheel resists changes in rotational speed, an inductor resists changes in electrical current. This property makes inductors perfect for smoothing current flow and storing magnetic energy." data-zh="可以把电感器想象成机械系统中的飞轮 - 就像飞轮阻止转速变化一样，电感器阻止电流变化。这个特性使电感器非常适合平滑电流流动和储存磁能。">Think of an inductor like a flywheel in a mechanical system - just as a flywheel resists changes in rotational speed, an inductor resists changes in electrical current. This property makes inductors perfect for smoothing current flow and storing magnetic energy.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-50 rounded-lg p-8 shadow-lg">
+                        <div class="text-8xl text-primary mb-4">
+                            <svg viewBox="0 0 100 40" class="w-32 h-16 mx-auto">
+                                <path d="M10 20 L25 20 M25 20 Q30 10 35 20 Q40 30 45 20 Q50 10 55 20 Q60 30 65 20 Q70 10 75 20 M75 20 L90 20" 
+                                      stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2" data-en="Circuit Symbol" data-zh="电路符号">Circuit Symbol</h3>
+                        <p class="text-gray-600" data-en="Standard inductor symbol" data-zh="标准电感器符号">Standard inductor symbol</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Functions -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center" data-en="Main Functions" data-zh="主要功能">Main Functions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-primary text-3xl mb-3">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <h4 class="font-bold mb-2" data-en="Current Filtering" data-zh="电流滤波">Current Filtering</h4>
+                        <p class="text-sm text-gray-600" data-en="Smooths current ripple in power supplies" data-zh="平滑电源中的电流纹波">Smooths current ripple in power supplies</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-primary text-3xl mb-3">
+                            <i class="fas fa-battery-three-quarters"></i>
+                        </div>
+                        <h4 class="font-bold mb-2" data-en="Energy Storage" data-zh="储能">Energy Storage</h4>
+                        <p class="text-sm text-gray-600" data-en="Stores magnetic energy for power conversion" data-zh="储存磁能用于功率转换">Stores magnetic energy for power conversion</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-primary text-3xl mb-3">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h4 class="font-bold mb-2" data-en="Impedance Control" data-zh="阻抗控制">Impedance Control</h4>
+                        <p class="text-sm text-gray-600" data-en="Controls AC impedance in circuits" data-zh="控制电路中的交流阻抗">Controls AC impedance in circuits</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-primary text-3xl mb-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="font-bold mb-2" data-en="EMI Suppression" data-zh="EMI抑制">EMI Suppression</h4>
+                        <p class="text-sm text-gray-600" data-en="Reduces electromagnetic interference" data-zh="减少电磁干扰">Reduces electromagnetic interference</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Working Principle -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center" data-en="Working Principle" data-zh="工作原理">Working Principle</h2>
+                <div class="bg-gray-50 rounded-lg p-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4" data-en="Electromagnetic Induction" data-zh="电磁感应">Electromagnetic Induction</h3>
+                            <p class="text-accent mb-4" data-en="When current flows through an inductor's coil, it creates a magnetic field. Any change in current causes a change in the magnetic field, which induces a voltage that opposes the current change (Lenz's Law). This self-induced voltage is proportional to the rate of current change." data-zh="当电流流过电感器线圈时，会产生磁场。电流的任何变化都会引起磁场变化，从而感应出阻止电流变化的电压（楞次定律）。这个自感电压与电流变化率成正比。">When current flows through an inductor's coil, it creates a magnetic field. Any change in current causes a change in the magnetic field, which induces a voltage that opposes the current change (Lenz's Law). This self-induced voltage is proportional to the rate of current change.</p>
+                            <div class="bg-white rounded p-4 border-l-4 border-primary">
+                                <p class="font-mono text-lg text-center">V = L × (dI/dt)</p>
+                                <p class="text-sm text-gray-600 text-center mt-2" data-en="Voltage = Inductance × Current Change Rate" data-zh="电压 = 电感 × 电流变化率">Voltage = Inductance × Current Change Rate</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4" data-en="Core Materials" data-zh="磁芯材料">Core Materials</h3>
+                            <p class="text-accent mb-4" data-en="The core material significantly affects the inductor's performance. Different materials provide different permeability levels, affecting inductance value, saturation current, and frequency response." data-zh="磁芯材料显著影响电感器的性能。不同材料提供不同的磁导率水平，影响电感值、饱和电流和频率响应。">The core material significantly affects the inductor's performance. Different materials provide different permeability levels, affecting inductance value, saturation current, and frequency response.</p>
+                            <ul class="text-sm text-gray-600">
+                                <li data-en="• Air core: Linear, no saturation" data-zh="• 空心：线性，无饱和">• Air core: Linear, no saturation</li>
+                                <li data-en="• Ferrite: High frequency, low loss" data-zh="• 铁氧体：高频，低损耗">• Ferrite: High frequency, low loss</li>
+                                <li data-en="• Iron powder: High current, distributed gap" data-zh="• 铁粉：大电流，分布式气隙">• Iron powder: High current, distributed gap</li>
+                                <li data-en="• Laminated: Low frequency, high power" data-zh="• 叠片：低频，大功率">• Laminated: Low frequency, high power</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Categories -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center" data-en="Product Categories" data-zh="产品分类">Product Categories</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4" data-en="By Application Type" data-zh="按应用类型分类">By Application Type</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Power Inductors" data-zh="功率电感">Power Inductors</span>
+                                    <p class="text-sm text-gray-600" data-en="DC-DC converters, high current" data-zh="DC-DC转换器，大电流">DC-DC converters, high current</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="RF Inductors" data-zh="射频电感">RF Inductors</span>
+                                    <p class="text-sm text-gray-600" data-en="High frequency, low loss" data-zh="高频，低损耗">High frequency, low loss</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Common Mode Chokes" data-zh="共模扼流圈">Common Mode Chokes</span>
+                                    <p class="text-sm text-gray-600" data-en="EMI filtering, differential signals" data-zh="EMI滤波，差分信号">EMI filtering, differential signals</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Ferrite Beads" data-zh="磁珠">Ferrite Beads</span>
+                                    <p class="text-sm text-gray-600" data-en="High frequency noise suppression" data-zh="高频噪声抑制">High frequency noise suppression</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4" data-en="By Construction" data-zh="按结构分类">By Construction</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-secondary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Shielded Inductors" data-zh="屏蔽电感">Shielded Inductors</span>
+                                    <p class="text-sm text-gray-600" data-en="Reduced EMI, compact design" data-zh="减少EMI，紧凑设计">Reduced EMI, compact design</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-secondary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Unshielded Inductors" data-zh="非屏蔽电感">Unshielded Inductors</span>
+                                    <p class="text-sm text-gray-600" data-en="Higher inductance, lower cost" data-zh="更高电感，更低成本">Higher inductance, lower cost</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-secondary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Molded Inductors" data-zh="模压电感">Molded Inductors</span>
+                                    <p class="text-sm text-gray-600" data-en="Surface mount, automated assembly" data-zh="表面贴装，自动化装配">Surface mount, automated assembly</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-secondary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Wire Wound Inductors" data-zh="线绕电感">Wire Wound Inductors</span>
+                                    <p class="text-sm text-gray-600" data-en="High precision, custom values" data-zh="高精度，定制值">High precision, custom values</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Parameters -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center" data-en="Key Parameters" data-zh="主要参数">Key Parameters</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="Inductance (H)" data-zh="电感值 (H)">Inductance (H)</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="The ability to store magnetic energy, measured in Henries" data-zh="储存磁能的能力，以亨利为单位测量">The ability to store magnetic energy, measured in Henries</p>
+                        <p class="text-xs text-gray-500" data-en="Range: nH to mH" data-zh="范围：纳亨到毫亨">Range: nH to mH</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="Saturation Current (A)" data-zh="饱和电流 (A)">Saturation Current (A)</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="Maximum current before core saturation occurs" data-zh="磁芯饱和前的最大电流">Maximum current before core saturation occurs</p>
+                        <p class="text-xs text-gray-500" data-en="Critical for power applications" data-zh="对功率应用至关重要">Critical for power applications</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="DC Resistance (Ω)" data-zh="直流电阻 (Ω)">DC Resistance (Ω)</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="Resistance of the wire winding" data-zh="线圈绕组的电阻">Resistance of the wire winding</p>
+                        <p class="text-xs text-gray-500" data-en="Affects power loss and efficiency" data-zh="影响功率损耗和效率">Affects power loss and efficiency</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="Self-Resonant Frequency" data-zh="自谐振频率">Self-Resonant Frequency</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="Frequency where parasitic capacitance resonates" data-zh="寄生电容谐振的频率">Frequency where parasitic capacitance resonates</p>
+                        <p class="text-xs text-gray-500" data-en="Upper frequency limit" data-zh="频率上限">Upper frequency limit</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="Quality Factor (Q)" data-zh="品质因数 (Q)">Quality Factor (Q)</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="Ratio of energy stored to energy lost" data-zh="储存能量与损失能量的比值">Ratio of energy stored to energy lost</p>
+                        <p class="text-xs text-gray-500" data-en="Higher Q = lower loss" data-zh="更高Q值 = 更低损耗">Higher Q = lower loss</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="Package Size" data-zh="封装尺寸">Package Size</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="Physical dimensions for PCB layout" data-zh="用于PCB布局的物理尺寸">Physical dimensions for PCB layout</p>
+                        <p class="text-xs text-gray-500" data-en="0603, 0805, 1210, etc." data-zh="0603，0805，1210等">0603, 0805, 1210, etc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Applications -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center" data-en="Applications & Use Cases" data-zh="应用与使用场景">Applications & Use Cases</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3" data-en="Power Management" data-zh="电源管理">Power Management</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li data-en="• DC-DC buck converters" data-zh="• DC-DC降压转换器">• DC-DC buck converters</li>
+                            <li data-en="• Boost converters" data-zh="• 升压转换器">• Boost converters</li>
+                            <li data-en="• Power factor correction" data-zh="• 功率因数校正">• Power factor correction</li>
+                            <li data-en="• Energy storage systems" data-zh="• 储能系统">• Energy storage systems</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3" data-en="RF & Wireless" data-zh="射频与无线">RF & Wireless</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li data-en="• Antenna matching networks" data-zh="• 天线匹配网络">• Antenna matching networks</li>
+                            <li data-en="• RF filters and tuning" data-zh="• 射频滤波器和调谐">• RF filters and tuning</li>
+                            <li data-en="• Oscillator circuits" data-zh="• 振荡器电路">• Oscillator circuits</li>
+                            <li data-en="• Impedance matching" data-zh="• 阻抗匹配">• Impedance matching</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3" data-en="EMI/EMC Solutions" data-zh="EMI/EMC解决方案">EMI/EMC Solutions</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li data-en="• Common mode filtering" data-zh="• 共模滤波">• Common mode filtering</li>
+                            <li data-en="• Differential mode filtering" data-zh="• 差模滤波">• Differential mode filtering</li>
+                            <li data-en="• Power line filtering" data-zh="• 电源线滤波">• Power line filtering</li>
+                            <li data-en="• Signal line protection" data-zh="• 信号线保护">• Signal line protection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="bg-primary text-white rounded-lg p-8 text-center">
+                <h3 class="text-2xl font-bold mb-4" data-en="Need Inductors for Your Project?" data-zh="项目需要电感器？">Need Inductors for Your Project?</h3>
+                <p class="mb-6 opacity-90" data-en="Contact our experts for technical consultation and competitive quotes" data-zh="联系我们的专家获取技术咨询和竞争性报价">Contact our experts for technical consultation and competitive quotes</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="products.html" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" data-en="← Back to Products" data-zh="← 返回产品">← Back to Products</a>
+                    <a href="partners.html" class="bg-secondary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors inline-block" data-en="Browse Partners" data-zh="浏览合作伙伴">Browse Partners</a>
+                    <a href="contact.html" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" data-en="Contact Us" data-zh="联系我们">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="./public/logo.jpeg" alt="Weyston Technology" class="h-8 w-auto mr-3">
+                    <div>
+                        <div class="font-bold" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                        <div class="text-sm opacity-75" data-en="One-Stop Electronic Components Procurement Service Provider" data-zh="一站式电子元器件采购服务供应商">One-Stop Electronic Components Procurement Service Provider</div>
+                    </div>
+                </div>
+                <div class="text-sm opacity-75">
+                    <span data-en="© 2024 Weyston Technology. All rights reserved." data-zh="© 2024 纬思通科技。保留所有权利。">© 2024 Weyston Technology. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Capacitors - Electronic Components | Weyston Technology" data-zh="电容器 - 电子元器件 | 纬思通科技">Capacitors - Electronic Components | Weyston Technology</title>
+    
+    <meta name="description" content="专业电容器产品：多层陶瓷电容、电解电容、钽电容、薄膜电容等，详细介绍工作原理、分类、参数和应用场景。Professional capacitor products with comprehensive specifications and applications.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#042454',
+                        secondary: '#fbbf24',
+                        accent: '#374151',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('selectedLanguage');
+            if (savedLang) {
+                window.currentLang = savedLang;
+                document.documentElement.lang = savedLang;
+                if (savedLang !== 'en') {
+                    document.documentElement.classList.add('lang-loading');
+                }
+            }
+        })();
+    </script>
+    <style>
+        .lang-loading body { opacity: 0; transition: opacity 0.1s ease-in-out; }
+        body { opacity: 1; }
+        .menu-item { position: relative; }
+        .menu-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #042454;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .menu-item:hover::after { width: 100%; }
+        .mobile-menu-item { position: relative; }
+        .mobile-menu-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 4px;
+            background-color: #042454;
+            transition: all 0.3s ease;
+            transform: translateY(-50%);
+        }
+        .mobile-menu-item:hover::before { width: 4px; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="./public/logo.jpeg" alt="Weyston Technology" class="h-10 w-auto">
+                    </a>
+                    <div class="ml-3">
+                        <div class="text-primary font-bold text-lg" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="langToggle" class="bg-primary text-white px-3 py-1 rounded-md text-sm hover:bg-slate-500 transition-colors">中文</button>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-accent hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="mobileLangToggle" class="block w-full text-left px-3 py-2 bg-primary text-white rounded-md mt-2">中文</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="bg-gray-50 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm">
+                <a href="index.html" class="text-primary hover:text-accent" data-en="Home" data-zh="首页">Home</a>
+                <span class="mx-2 text-gray-500">/</span>
+                <a href="products.html" class="text-primary hover:text-accent" data-en="Products" data-zh="产品">Products</a>
+                <span class="mx-2 text-gray-500">/</span>
+                <span class="text-gray-600" data-en="Capacitors" data-zh="电容器">Capacitors</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="relative text-white py-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
+                 alt="Capacitors Background" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gray-900/40"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center relative z-10">
+                <div class="text-6xl mb-4">
+                    <i class="fas fa-battery-half"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-en="Capacitors" data-zh="电容器">Capacitors</h1>
+                <p class="text-xl opacity-90" data-en="Energy storage components for filtering, coupling, and timing applications" data-zh="用于滤波、耦合和定时应用的储能元器件">Energy storage components for filtering, coupling, and timing applications</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Overview -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h2 class="text-3xl font-bold text-primary mb-6" data-en="What are Capacitors?" data-zh="什么是电容器？">What are Capacitors?</h2>
+                    <p class="text-lg text-accent mb-6" data-en="Capacitors are passive electronic components that store electrical energy in an electric field. They consist of two conductive plates separated by an insulating material called a dielectric. Capacitors are essential for filtering, energy storage, and signal processing in electronic circuits." data-zh="电容器是被动电子元器件，在电场中储存电能。它们由两个导电板组成，中间由称为电介质的绝缘材料分隔。电容器在电子电路中对于滤波、储能和信号处理至关重要。">Capacitors are passive electronic components that store electrical energy in an electric field. They consist of two conductive plates separated by an insulating material called a dielectric. Capacitors are essential for filtering, energy storage, and signal processing in electronic circuits.</p>
+                    <p class="text-accent mb-8" data-en="Think of a capacitor like a rechargeable battery that charges and discharges very quickly. It can store electrical energy when voltage is applied and release it when needed, making it perfect for smoothing power supplies and filtering signals." data-zh="可以把电容器想象成一个充放电非常快的充电电池。当施加电压时它可以储存电能，需要时释放电能，这使它非常适合平滑电源和滤波信号。">Think of a capacitor like a rechargeable battery that charges and discharges very quickly. It can store electrical energy when voltage is applied and release it when needed, making it perfect for smoothing power supplies and filtering signals.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-50 rounded-lg p-8 shadow-lg">
+                        <div class="text-8xl text-primary mb-4">
+                            <svg viewBox="0 0 100 40" class="w-32 h-16 mx-auto">
+                                <path d="M10 20 L35 20 M35 10 L35 30 M45 10 L45 30 M45 20 L90 20" 
+                                      stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-2" data-en="Circuit Symbol" data-zh="电路符号">Circuit Symbol</h3>
+                        <p class="text-gray-600" data-en="Standard capacitor symbol" data-zh="标准电容器符号">Standard capacitor symbol</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Functions -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center" data-en="Main Functions" data-zh="主要功能">Main Functions</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-primary text-3xl mb-3">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <h4 class="font-bold mb-2" data-en="Filtering" data-zh="滤波">Filtering</h4>
+                        <p class="text-sm text-gray-600" data-en="Removes unwanted noise and ripple from signals" data-zh="从信号中去除不需要的噪声和纹波">Removes unwanted noise and ripple from signals</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-primary text-3xl mb-3">
+                            <i class="fas fa-battery-three-quarters"></i>
+                        </div>
+                        <h4 class="font-bold mb-2" data-en="Energy Storage" data-zh="储能">Energy Storage</h4>
+                        <p class="text-sm text-gray-600" data-en="Stores electrical energy for later use" data-zh="储存电能供以后使用">Stores electrical energy for later use</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-primary text-3xl mb-3">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h4 class="font-bold mb-2" data-en="Coupling" data-zh="耦合">Coupling</h4>
+                        <p class="text-sm text-gray-600" data-en="Transfers AC signals while blocking DC components" data-zh="传输交流信号同时阻断直流分量">Transfers AC signals while blocking DC components</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6 text-center">
+                        <div class="text-primary text-3xl mb-3">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 class="font-bold mb-2" data-en="Timing" data-zh="定时">Timing</h4>
+                        <p class="text-sm text-gray-600" data-en="Creates time delays in RC circuits" data-zh="在RC电路中创建时间延迟">Creates time delays in RC circuits</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Working Principle -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center" data-en="Working Principle" data-zh="工作原理">Working Principle</h2>
+                <div class="bg-gray-50 rounded-lg p-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4" data-en="Charge Storage" data-zh="电荷储存">Charge Storage</h3>
+                            <p class="text-accent mb-4" data-en="When voltage is applied across a capacitor, positive charges accumulate on one plate and negative charges on the other, creating an electric field between them. The amount of charge stored is proportional to the applied voltage." data-zh="当电压施加在电容器两端时，正电荷在一个极板上积累，负电荷在另一个极板上积累，在它们之间创建电场。储存的电荷量与施加的电压成正比。">When voltage is applied across a capacitor, positive charges accumulate on one plate and negative charges on the other, creating an electric field between them. The amount of charge stored is proportional to the applied voltage.</p>
+                            <div class="bg-white rounded p-4 border-l-4 border-primary">
+                                <p class="font-mono text-lg text-center">Q = C × V</p>
+                                <p class="text-sm text-gray-600 text-center mt-2" data-en="Charge = Capacitance × Voltage" data-zh="电荷 = 电容 × 电压">Charge = Capacitance × Voltage</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4" data-en="Dielectric Materials" data-zh="电介质材料">Dielectric Materials</h3>
+                            <p class="text-accent mb-4" data-en="The dielectric material between the plates determines the capacitor's characteristics. Different materials provide different dielectric constants, affecting capacitance value, voltage rating, and temperature stability." data-zh="极板之间的电介质材料决定了电容器的特性。不同材料提供不同的介电常数，影响电容值、电压额定值和温度稳定性。">The dielectric material between the plates determines the capacitor's characteristics. Different materials provide different dielectric constants, affecting capacitance value, voltage rating, and temperature stability.</p>
+                            <ul class="text-sm text-gray-600">
+                                <li data-en="• Ceramic: High frequency, stable" data-zh="• 陶瓷：高频，稳定">• Ceramic: High frequency, stable</li>
+                                <li data-en="• Electrolytic: High capacitance" data-zh="• 电解：高电容">• Electrolytic: High capacitance</li>
+                                <li data-en="• Film: Low loss, precision" data-zh="• 薄膜：低损耗，精密">• Film: Low loss, precision</li>
+                                <li data-en="• Tantalum: Compact, reliable" data-zh="• 钽：紧凑，可靠">• Tantalum: Compact, reliable</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Categories -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center" data-en="Product Categories" data-zh="产品分类">Product Categories</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4" data-en="By Dielectric Type" data-zh="按电介质类型分类">By Dielectric Type</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Ceramic Capacitors (MLCC)" data-zh="陶瓷电容器 (MLCC)">Ceramic Capacitors (MLCC)</span>
+                                    <p class="text-sm text-gray-600" data-en="High frequency, temperature stable" data-zh="高频，温度稳定">High frequency, temperature stable</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Electrolytic Capacitors" data-zh="电解电容器">Electrolytic Capacitors</span>
+                                    <p class="text-sm text-gray-600" data-en="High capacitance, polarized" data-zh="高电容，有极性">High capacitance, polarized</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Tantalum Capacitors" data-zh="钽电容器">Tantalum Capacitors</span>
+                                    <p class="text-sm text-gray-600" data-en="Compact, stable, reliable" data-zh="紧凑，稳定，可靠">Compact, stable, reliable</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-primary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Film Capacitors" data-zh="薄膜电容器">Film Capacitors</span>
+                                    <p class="text-sm text-gray-600" data-en="Low loss, high precision" data-zh="低损耗，高精度">Low loss, high precision</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4" data-en="By Application" data-zh="按应用分类">By Application</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-secondary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Decoupling Capacitors" data-zh="去耦电容">Decoupling Capacitors</span>
+                                    <p class="text-sm text-gray-600" data-en="Power supply filtering" data-zh="电源滤波">Power supply filtering</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-secondary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Timing Capacitors" data-zh="定时电容">Timing Capacitors</span>
+                                    <p class="text-sm text-gray-600" data-en="RC timing circuits" data-zh="RC定时电路">RC timing circuits</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-secondary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Coupling Capacitors" data-zh="耦合电容">Coupling Capacitors</span>
+                                    <p class="text-sm text-gray-600" data-en="AC signal transmission" data-zh="交流信号传输">AC signal transmission</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-secondary rounded-full mr-3"></div>
+                                <div>
+                                    <span class="font-semibold" data-en="Energy Storage" data-zh="储能电容">Energy Storage</span>
+                                    <p class="text-sm text-gray-600" data-en="Power backup, flash circuits" data-zh="电源备份，闪光电路">Power backup, flash circuits</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Parameters -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center" data-en="Key Parameters" data-zh="主要参数">Key Parameters</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="Capacitance (F)" data-zh="电容值 (F)">Capacitance (F)</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="The ability to store electrical charge, measured in Farads" data-zh="储存电荷的能力，以法拉为单位测量">The ability to store electrical charge, measured in Farads</p>
+                        <p class="text-xs text-gray-500" data-en="Range: pF to mF" data-zh="范围：皮法到毫法">Range: pF to mF</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="Voltage Rating (V)" data-zh="电压额定值 (V)">Voltage Rating (V)</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="Maximum voltage that can be safely applied" data-zh="可以安全施加的最大电压">Maximum voltage that can be safely applied</p>
+                        <p class="text-xs text-gray-500" data-en="Critical for reliability" data-zh="对可靠性至关重要">Critical for reliability</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="Tolerance (%)" data-zh="精度 (%)">Tolerance (%)</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="Acceptable deviation from nominal capacitance" data-zh="与标称电容值的允许偏差">Acceptable deviation from nominal capacitance</p>
+                        <p class="text-xs text-gray-500" data-en="Common: ±5%, ±10%, ±20%" data-zh="常见：±5%，±10%，±20%">Common: ±5%, ±10%, ±20%</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="ESR (Ω)" data-zh="等效串联电阻 (Ω)">ESR (Ω)</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="Equivalent Series Resistance affects efficiency" data-zh="等效串联电阻影响效率">Equivalent Series Resistance affects efficiency</p>
+                        <p class="text-xs text-gray-500" data-en="Lower is better" data-zh="越低越好">Lower is better</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="Temperature Coefficient" data-zh="温度系数">Temperature Coefficient</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="Capacitance change with temperature" data-zh="电容随温度的变化">Capacitance change with temperature</p>
+                        <p class="text-xs text-gray-500" data-en="X7R, X5R, C0G types" data-zh="X7R，X5R，C0G类型">X7R, X5R, C0G types</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h4 class="font-bold text-lg mb-3" data-en="Package Size" data-zh="封装尺寸">Package Size</h4>
+                        <p class="text-sm text-gray-600 mb-2" data-en="Physical dimensions for PCB design" data-zh="用于PCB设计的物理尺寸">Physical dimensions for PCB design</p>
+                        <p class="text-xs text-gray-500" data-en="0402, 0603, 0805, 1206..." data-zh="0402，0603，0805，1206...">0402, 0603, 0805, 1206...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Applications -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-primary mb-8 text-center" data-en="Applications & Use Cases" data-zh="应用与使用场景">Applications & Use Cases</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3" data-en="Power Management" data-zh="电源管理">Power Management</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li data-en="• DC-DC converters" data-zh="• DC-DC转换器">• DC-DC converters</li>
+                            <li data-en="• Power supply filtering" data-zh="• 电源滤波">• Power supply filtering</li>
+                            <li data-en="• Voltage regulation" data-zh="• 电压调节">• Voltage regulation</li>
+                            <li data-en="• Energy storage" data-zh="• 储能">• Energy storage</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3" data-en="RF & Communications" data-zh="射频与通信">RF & Communications</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li data-en="• RF coupling/decoupling" data-zh="• 射频耦合/去耦">• RF coupling/decoupling</li>
+                            <li data-en="• Antenna matching" data-zh="• 天线匹配">• Antenna matching</li>
+                            <li data-en="• Filter circuits" data-zh="• 滤波电路">• Filter circuits</li>
+                            <li data-en="• Oscillator circuits" data-zh="• 振荡器电路">• Oscillator circuits</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        <h4 class="font-bold text-lg mb-3" data-en="Audio & Signal Processing" data-zh="音频与信号处理">Audio & Signal Processing</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li data-en="• Audio coupling" data-zh="• 音频耦合">• Audio coupling</li>
+                            <li data-en="• Crossover networks" data-zh="• 分频网络">• Crossover networks</li>
+                            <li data-en="• Tone control circuits" data-zh="• 音调控制电路">• Tone control circuits</li>
+                            <li data-en="• Signal filtering" data-zh="• 信号滤波">• Signal filtering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="bg-primary text-white rounded-lg p-8 text-center">
+                <h3 class="text-2xl font-bold mb-4" data-en="Need Capacitors for Your Project?" data-zh="项目需要电容器？">Need Capacitors for Your Project?</h3>
+                <p class="mb-6 opacity-90" data-en="Contact our experts for technical consultation and competitive quotes" data-zh="联系我们的专家获取技术咨询和竞争性报价">Contact our experts for technical consultation and competitive quotes</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="products.html" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" data-en="← Back to Products" data-zh="← 返回产品">← Back to Products</a>
+                    <a href="partners.html" class="bg-secondary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors inline-block" data-en="Browse Partners" data-zh="浏览合作伙伴">Browse Partners</a>
+                    <a href="contact.html" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block" data-en="Contact Us" data-zh="联系我们">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="./public/logo.jpeg" alt="Weyston Technology" class="h-8 w-auto mr-3">
+                    <div>
+                        <div class="font-bold" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                        <div class="text-sm opacity-75" data-en="One-Stop Electronic Components Procurement Service Provider" data-zh="一站式电子元器件采购服务供应商">One-Stop Electronic Components Procurement Service Provider</div>
+                    </div>
+                </div>
+                <div class="text-sm opacity-75">
+                    <span data-en="© 2024 Weyston Technology. All rights reserved." data-zh="© 2024 纬思通科技。保留所有权利。">© 2024 Weyston Technology. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/common.js"></script>
+</body>
+</html>

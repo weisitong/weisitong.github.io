@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Products - Weyston Technology Electronic Components" data-zh="产品 - 纬思通科技电子元器件">Products - Weyston Technology Electronic Components</title>
+    
+    <meta name="description" content="浏览我们全面的电子元器件产品线：电阻器、电容器、电感器、二极管、晶振、连接器等，来自Murata村田、Yageo国巨、TDK、Samsung三星等知名品牌制造商的代理分销产品。Browse comprehensive electronic components: resistors, capacitors, inductors, diodes, crystals, connectors from leading manufacturers.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="电子元器件产品,electronic components products,被动元件,passive components,电阻器,resistors,贴片电阻,chip resistors,精密电阻,precision resistors,功率电阻,power resistors,电容器,capacitors,多层陶瓷电容,MLCC,电解电容,electrolytic capacitors,钽电容,tantalum capacitors,薄膜电容,film capacitors,电感器,inductors,功率电感,power inductors,射频电感,RF inductors,共模扼流圈,common mode chokes,磁珠,ferrite beads,二极管,diodes,肖特基二极管,Schottky diodes,TVS二极管,TVS diodes,整流二极管,rectifier diodes,齐纳二极管,Zener diodes,晶振,crystals,石英晶体,quartz crystals,陶瓷谐振器,ceramic resonators,时钟振荡器,clock oscillators,连接器,connectors,板对板连接器,board-to-board connectors,线对板连接器,wire-to-board connectors,射频连接器,RF connectors,村田代理,Murata distributor,国巨代理,Yageo distributor,TDK代理,TDK distributor,三星代理,Samsung distributor,太阳诱电代理,Taiyo Yuden distributor,原装正品,authentic components,现货供应,stock supply,快速交付,fast delivery">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="电子元器件产品 - 纬思通科技专业代理分销">
+    <meta property="og:description" content="专业代理分销电阻器、电容器、电感器、二极管、晶振、连接器等电子元器件，来自Murata、Yageo、TDK、Samsung等知名品牌">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://weyston.com/products.html">
+    
+    <!-- Structured Data - Product Catalog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "电子元器件产品目录",
+      "description": "纬思通科技专业代理分销的电子元器件产品",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "position": 1,
+          "name": "电阻器",
+          "alternateName": "Resistors",
+          "description": "精密电阻、贴片电阻、功率电阻、可变电阻等各类电阻器产品",
+          "category": "电子元器件",
+          "brand": ["Yageo", "UNI-ROYAL", "厚声"]
+        },
+        {
+          "@type": "Product", 
+          "position": 2,
+          "name": "电容器",
+          "alternateName": "Capacitors",
+          "description": "多层陶瓷电容、电解电容、钽电容、薄膜电容等各类电容器产品",
+          "category": "电子元器件",
+          "brand": ["Murata", "Samsung", "TDK", "Taiyo Yuden"]
+        },
+        {
+          "@type": "Product",
+          "position": 3, 
+          "name": "电感器",
+          "alternateName": "Inductors",
+          "description": "功率电感、射频电感、共模扼流圈、磁珠等各类电感器产品",
+          "category": "电子元器件",
+          "brand": ["TDK", "Taiyo Yuden", "Sunlord"]
+        },
+        {
+          "@type": "Product",
+          "position": 4,
+          "name": "二极管", 
+          "alternateName": "Diodes",
+          "description": "肖特基二极管、TVS二极管、整流二极管、齐纳二极管等各类二极管产品",
+          "category": "电子元器件"
+        },
+        {
+          "@type": "Product",
+          "position": 5,
+          "name": "晶振",
+          "alternateName": "Crystals & Oscillators", 
+          "description": "石英晶体、陶瓷谐振器、时钟振荡器等精密时序器件",
+          "category": "电子元器件",
+          "brand": ["Epson", "TKD", "SII"]
+        },
+        {
+          "@type": "Product",
+          "position": 6,
+          "name": "连接器",
+          "alternateName": "Connectors",
+          "description": "板对板连接器、线对板连接器、I/O连接器、射频连接器等互连产品",
+          "category": "电子元器件"
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#042454',
+                        secondary: '#fbbf24',
+                        accent: '#374151',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        // Prevent language flash by applying saved language immediately
+        (function() {
+            const savedLang = localStorage.getItem('selectedLanguage');
+            if (savedLang) {
+                window.currentLang = savedLang;
+                document.documentElement.lang = savedLang;
+                
+                // 立即应用语言设置，防止闪烁
+                if (savedLang !== 'en') {
+                    document.documentElement.classList.add('lang-loading');
+                }
+            }
+        })();
+    </script>
+    <style>
+        /* Hide content briefly while language is being applied */
+        .lang-loading body {
+            opacity: 0;
+            transition: opacity 0.1s ease-in-out;
+        }
+        
+        /* Show content when language is applied */
+        body {
+            opacity: 1;
+        }
+        
+        /* Menu underline animation */
+        .menu-item {
+            position: relative;
+        }
+        
+        .menu-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #042454;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .menu-item:hover::after {
+            width: 100%;
+        }
+        
+        .menu-item.active::after {
+            width: 100%;
+        }
+        
+        /* Mobile menu left border animation */
+        .mobile-menu-item {
+            position: relative;
+        }
+        
+        .mobile-menu-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 4px;
+            background-color: #042454;
+            transition: all 0.3s ease;
+            transform: translateY(-50%);
+        }
+        
+        .mobile-menu-item:hover::before {
+            width: 4px;
+        }
+        
+        .mobile-menu-item.active::before {
+            width: 4px;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="./public/logo.jpeg" alt="纬思通科技(Weyston Technology) - 专业电子元器件一站式采购服务商，提供Murata 村田、Yageo 国巨、TDK、Taiyo Yuden 太阳诱电 太诱、等品牌电阻、电容、电感、二极管、晶振、连接器等各类电子元器件" class="h-10 w-auto">
+                    </a>
+                    <div class="ml-3">
+                        <div class="text-primary font-bold text-lg" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="menu-item active text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="menu-item text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    
+                    <!-- Language Toggle -->
+                    <button id="langToggle" class="bg-primary text-white px-3 py-1 rounded-md text-sm hover:bg-accent transition-colors">
+                        中文
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" class="text-accent hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden hidden bg-white border-t">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Home" data-zh="首页">Home</a>
+                    <a href="products.html" class="mobile-menu-item active block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Products" data-zh="产品">Products</a>
+                    <a href="partners.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Partners" data-zh="合作伙伴">Partners</a>
+                    <a href="support.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Support" data-zh="技术支持">Support</a>
+                    <a href="about.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="About" data-zh="关于我们">About</a>
+                    <a href="contact.html" class="mobile-menu-item block px-3 py-2 text-accent hover:text-primary transition-colors" data-en="Contact" data-zh="联系我们">Contact</a>
+                    <button id="mobileLangToggle" class="block w-full text-left px-3 py-2 bg-primary text-white rounded-md mt-2">
+                        中文
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="relative text-white py-16 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" 
+                 alt="Electronic Components Background" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900/50 to-gray-800/50"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4" data-en="Electronic Components" data-zh="电子元器件">Electronic Components</h1>
+                <p class="text-xl opacity-90" data-en="Comprehensive range of high-quality electronic components for all your needs" data-zh="满足您所有需求的全面高品质电子元器件产品线">Comprehensive range of high-quality electronic components for all your needs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Resistors -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Resistors" data-zh="电阻器">Resistors</h3>
+                    <p class="text-accent mb-4" data-en="Precision resistors, chip resistors, power resistors, and variable resistors for various applications" data-zh="精密电阻、贴片电阻、功率电阻和可变电阻，适用于各种应用">Precision resistors, chip resistors, power resistors, and variable resistors for various applications</p>
+                    <ul class="text-sm text-gray-600 mb-6">
+                        <li data-en="• SMD Resistors" data-zh="• 贴片电阻">• SMD Resistors</li>
+                        <li data-en="• Through-hole Resistors" data-zh="• 插件电阻">• Through-hole Resistors</li>
+                        <li data-en="• Power Resistors" data-zh="• 功率电阻">• Power Resistors</li>
+                        <li data-en="• Variable Resistors" data-zh="• 可变电阻">• Variable Resistors</li>
+                    </ul>
+                    <a href="product-resistors.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-slate-500 transition-colors inline-block" data-en="View Details" data-zh="查看详情">View Details</a>
+                </div>
+
+                <!-- Capacitors -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-battery-half"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Capacitors" data-zh="电容器">Capacitors</h3>
+                    <p class="text-accent mb-4" data-en="Ceramic, electrolytic, tantalum, and film capacitors with superior performance characteristics" data-zh="陶瓷、电解、钽和薄膜电容器，具有卓越的性能特征">Ceramic, electrolytic, tantalum, and film capacitors with superior performance characteristics</p>
+                    <ul class="text-sm text-gray-600 mb-6">
+                        <li data-en="• MLCC Capacitors" data-zh="• 多层陶瓷电容">• MLCC Capacitors</li>
+                        <li data-en="• Electrolytic Capacitors" data-zh="• 电解电容">• Electrolytic Capacitors</li>
+                        <li data-en="• Tantalum Capacitors" data-zh="• 钽电容">• Tantalum Capacitors</li>
+                        <li data-en="• Film Capacitors" data-zh="• 薄膜电容">• Film Capacitors</li>
+                    </ul>
+                    <a href="product-capacitors.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-slate-500 transition-colors inline-block" data-en="View Details" data-zh="查看详情">View Details</a>
+                </div>
+
+                <!-- Inductors -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-circle-notch"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Inductors" data-zh="电感器">Inductors</h3>
+                    <p class="text-accent mb-4" data-en="High-quality inductors including power inductors, RF inductors, and common mode chokes" data-zh="高品质电感器，包括功率电感、射频电感和共模扼流圈">High-quality inductors including power inductors, RF inductors, and common mode chokes</p>
+                    <ul class="text-sm text-gray-600 mb-6">
+                        <li data-en="• Power Inductors" data-zh="• 功率电感">• Power Inductors</li>
+                        <li data-en="• RF Inductors" data-zh="• 射频电感">• RF Inductors</li>
+                        <li data-en="• Common Mode Chokes" data-zh="• 共模扼流圈">• Common Mode Chokes</li>
+                        <li data-en="• Ferrite Beads" data-zh="• 磁珠">• Ferrite Beads</li>
+                    </ul>
+                    <a href="product-inductors.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-slate-500 transition-colors inline-block" data-en="View Details" data-zh="查看详情">View Details</a>
+                </div>
+
+                <!-- Diodes -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Diodes" data-zh="二极管">Diodes</h3>
+                    <p class="text-accent mb-4" data-en="Schottky, Zener, TVS, and rectifier diodes for protection and power management" data-zh="肖特基、齐纳、TVS和整流二极管，用于保护和电源管理">Schottky, Zener, TVS, and rectifier diodes for protection and power management</p>
+                    <ul class="text-sm text-gray-600 mb-6">
+                        <li data-en="• Schottky Diodes" data-zh="• 肖特基二极管">• Schottky Diodes</li>
+                        <li data-en="• TVS Diodes" data-zh="• TVS二极管">• TVS Diodes</li>
+                        <li data-en="• Rectifier Diodes" data-zh="• 整流二极管">• Rectifier Diodes</li>
+                        <li data-en="• Zener Diodes" data-zh="• 齐纳二极管">• Zener Diodes</li>
+                    </ul>
+                    <a href="product-diodes.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-slate-500 transition-colors inline-block" data-en="View Details" data-zh="查看详情">View Details</a>
+                </div>
+
+                <!-- Crystals & Oscillators -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Crystals & Oscillators" data-zh="晶振与振荡器">Crystals & Oscillators</h3>
+                    <p class="text-accent mb-4" data-en="Precision timing solutions including quartz crystals, ceramic resonators, and oscillators" data-zh="精密时序解决方案，包括石英晶体、陶瓷谐振器和振荡器">Precision timing solutions including quartz crystals, ceramic resonators, and oscillators</p>
+                    <ul class="text-sm text-gray-600 mb-6">
+                        <li data-en="• Quartz Crystals" data-zh="• 石英晶体">• Quartz Crystals</li>
+                        <li data-en="• Ceramic Resonators" data-zh="• 陶瓷谐振器">• Ceramic Resonators</li>
+                        <li data-en="• Clock Oscillators" data-zh="• 时钟振荡器">• Clock Oscillators</li>
+                        <li data-en="• TCXO/VCXO" data-zh="• 温补/压控晶振">• TCXO/VCXO</li>
+                    </ul>
+                    <a href="product-crystals.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-slate-500 transition-colors inline-block" data-en="View Details" data-zh="查看详情">View Details</a>
+                </div>
+
+                <!-- Connectors -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3" data-en="Connectors" data-zh="连接器">Connectors</h3>
+                    <p class="text-accent mb-4" data-en="Reliable interconnect solutions including board-to-board, wire-to-board, and I/O connectors" data-zh="可靠的互连解决方案，包括板对板、线对板和I/O连接器">Reliable interconnect solutions including board-to-board, wire-to-board, and I/O connectors</p>
+                    <ul class="text-sm text-gray-600 mb-6">
+                        <li data-en="• Board-to-Board" data-zh="• 板对板连接器">• Board-to-Board</li>
+                        <li data-en="• Wire-to-Board" data-zh="• 线对板连接器">• Wire-to-Board</li>
+                        <li data-en="• I/O Connectors" data-zh="• I/O连接器">• I/O Connectors</li>
+                        <li data-en="• RF Connectors" data-zh="• 射频连接器">• RF Connectors</li>
+                    </ul>
+                    <a href="product-connectors.html" class="bg-primary text-white px-4 py-2 rounded hover:bg-slate-500 transition-colors inline-block" data-en="View Details" data-zh="查看详情">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-primary mb-4" data-en="Need Help Finding Components?" data-zh="需要帮助寻找元器件？">Need Help Finding Components?</h2>
+            <p class="text-lg text-accent mb-8" data-en="Our technical experts can help you find the right components for your specific requirements" data-zh="我们的技术专家可以帮助您找到符合特定要求的合适元器件">Our technical experts can help you find the right components for your specific requirements</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="partners.html" class="bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-accent transition-colors inline-block" data-en="Browse Partners" data-zh="浏览合作伙伴">Browse Partners</a>
+                <a href="support.html" class="bg-secondary text-primary px-8 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-500 transition-colors inline-block" data-en="Technical Support" data-zh="技术支持">Technical Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="./public/logo.jpeg" alt="Weyston Technology" class="h-8 w-auto mr-3">
+                    <div>
+                        <div class="font-bold" data-en="Weyston Technology" data-zh="纬思通科技">Weyston Technology</div>
+                        <div class="text-sm opacity-75" data-en="One-Stop Electronic Components Procurement Service Provider" data-zh="一站式电子元器件采购服务供应商">One-Stop Electronic Components Procurement Service Provider</div>
+                    </div>
+                </div>
+                <div class="text-sm opacity-75">
+                    <span data-en="© 2024 Weyston Technology. All rights reserved." data-zh="© 2024 纬思通科技。保留所有权利。">© 2024 Weyston Technology. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/common.js"></script>
+</body>
+</html>
