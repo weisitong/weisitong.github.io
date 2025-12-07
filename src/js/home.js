@@ -176,7 +176,7 @@ const hotSellingModels = [
         category_en: "MLCC Capacitor",
         category_zh: "多层陶瓷电容",
         model: "JDK063BBJ225MP-F",
-        specs: "",
+        specs: "0201 225 6.3V X5R",
         feature_en: "Best price, authorized channel, stable supply",
         feature_zh: "价格最优 代理渠道 供应稳定",
         icon: "fas fa-battery-half"
@@ -186,8 +186,8 @@ const hotSellingModels = [
         brand_zh: "太阳诱电 太诱",
         category_en: "MLCC Capacitor",
         category_zh: "多层陶瓷电容",
-        model: "LDK063BBJ225MP-F",
-        specs: "",
+        model: "LDK063BBJ225MPLF",
+        specs: "0201 225 10V X5R",
         feature_en: "Best price, authorized channel, stable supply",
         feature_zh: "价格最优 代理渠道 供应稳定",
         icon: "fas fa-battery-half"
